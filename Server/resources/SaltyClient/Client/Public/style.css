@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.mediaViewInfo {
+    --web-view-name: Canvas;
+    --web-view-id: Canvas;
+    --web-scale-to-fit: true;
+    --web-scale-to-fit-type: width;
+    --web-enable-scale-up: true;
+    --web-scale-on-resize: true;
+    --web-center-vertically: true;
+    --web-enable-deep-linking: true;
+}
+
+:root {
+    --web-view-ids: Canvas;
+    }
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+#Canvas {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background-color: rgba(0,0,0,0);
+    overflow: hidden;
+    --web-view-name: Canvas;
+    --web-view-id: Canvas;
+    --web-scale-to-fit: true;
+    --web-scale-to-fit-type: width;
+    --web-enable-scale-up: true;
+    --web-scale-on-resize: true;
+    --web-center-vertically: true;
+    --web-enable-deep-linking: true;
+}
+
+.bg {
+    z-index: 10000;
+    background-image: url("../Public/img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#saltychat {
+    position: absolute;
+    width: 414px;
+    height: 502px;
+    left: 753px;
+    top: 289px;
+    overflow: visible;
+}
+
+#EndlessRP_1 {
+    position: absolute;
+    width: 414px;
+    height: 502px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#EndlessRP_1_j {
+    fill: rgba(19,19,19,1);
+}
+
+.EndlessRP_1_j {
+    position: absolute;
+    overflow: visible;
+    width: 414px;
+    height: 502px;
+    left: 0px;
+    top: 0px;
+}
+
+#Hader {
+    position: absolute;
+    width: 414px;
+    height: 502px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#EndlessRPLogo {
+    left: -58px;
+    top: -105px;
+    position: absolute;
+    overflow: visible;
+    width: 199px;
+}
+
+#Gruppe_13 {
+    position: absolute;
+    width: 337px;
+    height: 294px;
+    left: 39px;
+    top: 189px;
+    overflow: visible;
+}
+
+#Gruppe_12 {
+    position: absolute;
+    width: 337px;
+    height: 55px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#EndlessRP_2 {
+    fill: rgba(30,30,30,1);
+}
+
+.EndlessRP_2 {
+    position: absolute;
+    overflow: visible;
+    width: 337px;
+    height: 55px;
+    left: 0px;
+    top: 0px;
+}
+
+#Um_auf_dem_Server_zu_spielen_m {
+    left: 54px;
+    top: 6px;
+    position: absolute;
+    overflow: visible;
+    width: 227px;
+    white-space: nowrap;
+    line-height: 15.000000953674316px;
+    margin-top: -1.2500004768371582px;
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12.5px;
+    color: rgba(255,255,255,1);
+}
+
+#Gruppe_12_t {
+    position: absolute;
+    width: 337px;
+    height: 55px;
+    left: 0px;
+    top: 67px;
+    overflow: visible;
+}
+
+#EndlessRP_2_u {
+    fill: rgba(30,30,30,1);
+}
+
+.EndlessRP_2_u {
+    position: absolute;
+    overflow: visible;
+    width: 337px;
+    height: 55px;
+    left: 0px;
+    top: 0px;
+}
+
+#Auerdem_muss_das_Saltychat_TS- {
+    left: 50px;
+    top: 13px;
+    position: absolute;
+    overflow: visible;
+    width: 219px;
+    white-space: nowrap;
+    line-height: 15.000000953674316px;
+    margin-top: -1.2500004768371582px;
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12.5px;
+    color: rgba(255,255,255,1);
+}
+
+#Gruppe_12_w {
+    position: absolute;
+    width: 337px;
+    height: 55px;
+    left: 0px;
+    top: 134px;
+    overflow: visible;
+}
+
+#EndlessRP_2_x {
+    fill: rgba(30,30,30,1);
+}
+
+.EndlessRP_2_x {
+    position: absolute;
+    overflow: visible;
+    width: 337px;
+    height: 55px;
+    left: 0px;
+    top: 0px;
+}
+
+#Achte_darauf_dass_du_keine_and {
+    left: 25px;
+    top: 10px;
+    position: absolute;
+    overflow: visible;
+    width: 231px;
+    white-space: nowrap;
+    line-height: 15.000000953674316px;
+    margin-top: -1.2500004768371582px;
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12.5px;
+    color: rgba(255,255,255,1);
+}
+
+#Gruppe_12_z {
+    position: absolute;
+    width: 337px;
+    height: 55px;
+    left: 0px;
+    top: 201px;
+    overflow: visible;
+}
+
+#EndlessRP_2_ {
+    fill: rgba(30,30,30,1);
+}
+
+.EndlessRP_2_ {
+    position: absolute;
+    overflow: visible;
+    width: 337px;
+    height: 55px;
+    left: 0px;
+    top: 0px;
+}
+
+#Bei_Fragen_oder_Problemen_kont {
+    left: 46px;
+    top: 9px;
+    position: absolute;
+    overflow: visible;
+    width: 245px;
+    white-space: nowrap;
+    line-height: 15.000000953674316px;
+    margin-top: -1.2500004768371582px;
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12.5px;
+    color: rgba(255,255,255,1);
+}
+
+#Gruppe_6 {
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    left: 138px;
+    top: 274px;
+    overflow: visible;
+}
+
+#EndlessRP_5 {
+    fill: rgba(30,30,30,1);
+}
+
+.EndlessRP_5 {
+    position: absolute;
+    overflow: visible;
+    width: 60px;
+    height: 20px;
+    left: 0px;
+    top: 0px;
+}
+
+#EndlessRP-V {
+    left: 10px;
+    top: 6px;
+    color: #fff;
+    position: absolute;
+    overflow: visible;
+    width: 41px;
+    white-space: nowrap;
+    line-height: 9.999996185302734px;
+    margin-top: -0.8333330154418945px;
+    text-align: left;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8.333330154418945px;
+ }
+
+#Gruppe_14 {
+    position: absolute;
+    width: 337px;
+    height: 29px;
+    left: 39px;
+    top: 150px;
+    overflow: visible;
+}
+
+#EndlessRP_5_ {
+    fill: rgba(30,30,30,1);
+}
+
+.EndlessRP_5_ {
+    position: absolute;
+    overflow: visible;
+    width: 337px;
+    height: 29px;
+    left: 0px;
+    top: 0px;
+}
+
+#SALTYCHAT_IST_NICHT_VERBUNDEN {
+    left: 66px;
+    top: 6px;
+    position: absolute;
+    overflow: visible;
+    width: 205px;
+    white-space: nowrap;
+    line-height: 15.000000953674316px;
+    margin-top: -1.2500004768371582px;
+    text-align: left;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12.5px;
+    color: #9e55ce;
+}
+
+@keyframes pulse { 50% {
+    background: #fff;
+}}
+
+.loading-pulse {
+    z-index: 10000;
+    position: relative;
+    width: 3px;
+    height: 15px;
+    margin-top: 120px;
+    margin-left: 200px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: pulse 750ms infinite;
+    animation-delay: 250ms;
+}
+
+.loading-pulse:before, .loading-pulse:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 12px;
+    width: 3px;
+    background: rgba(255, 255, 255, 0.2);
+    top: 50%;
+    transform: translateY(-50%);
+    animation: pulse 750ms infinite;
+}
+
+.loading-pulse:before {
+    left: -12px;
+}
+
+.loading-pulse:after {
+    left: 12px;
+    animation-delay: 500ms;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Vending Machine</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="main.css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+<div id="sprunk" v-if="visible" >
+	<div id="exit" onclick="Close()"></div>
+	<div id="canva">
+		<div id="text">1$</div>
+		<div id="sodas">
+			<img class="soda0" :src="" alt="" onclick="Buy()" />
+			<img class="soda1" :src="" alt="" onclick="Buy1()" />
+			<img class="soda2" :src="" alt="" onclick="Buy2()" />
+		</div>
+		<img id="pusheditem" :src="" style="display: none;" alt="" onclick="TakePushedItem()">
+	</div>
+</div>
+
+<script>
+	
+let item = "";
+let price = 0;
+	function Buy() {
+		document.getElementById('sprunk').style.animation = 'shakemachine'; 
+		document.getElementById('sprunk').style.animationDuration = '1500ms';	
+		document.getElementById("pusheditem").src="images/canvas/orangotangcan.png";	
+		alt.emit('sound', "flares_empty","DLC_SM_Countermeasures_Sounds")
+		setTimeout( function(){ 
+			alt.emit('sound', "Garage_Door_Open", "GTAO_Script_Doors_Faded_Screen_Sounds") 
+		}, 200)
+		item = "Orangensaft";
+		price = 1;
+		setTimeout( function(){	
+			document.getElementById("pusheditem",).style.display = "block";	
+			alt.emit('sound', "CLOSED", "MP_PROPERTIES_ELEVATOR_DOORS")				
+			machineready = true					
+		}, 1200);
+    }
+
+	function Buy1() {
+		document.getElementById('sprunk').style.animation = 'shakemachine'; 
+		document.getElementById('sprunk').style.animationDuration = '1500ms';
+		document.getElementById("pusheditem").src="images/canvas/ecolacan.png";	
+		alt.emit('sound', "flares_empty","DLC_SM_Countermeasures_Sounds")
+		setTimeout( function(){ 
+			alt.emit('sound', "Garage_Door_Open", "GTAO_Script_Doors_Faded_Screen_Sounds") 
+		}, 200)
+		item = "Cola";	
+		price = 1;
+		setTimeout( function(){	
+			document.getElementById("pusheditem",).style.display = "block";	
+			alt.emit('sound', "CLOSED", "MP_PROPERTIES_ELEVATOR_DOORS")					
+			machineready = true					
+		}, 1200);
+    }
+
+	function Buy2() {
+		document.getElementById('sprunk').style.animation = 'shakemachine'; 
+		document.getElementById('sprunk').style.animationDuration = '1500ms';	
+		document.getElementById("pusheditem").src="images/canvas/sprunkcan.png";
+		alt.emit('sound', "flares_empty","DLC_SM_Countermeasures_Sounds")
+		setTimeout( function(){ 
+			alt.emit('sound', "Garage_Door_Open", "GTAO_Script_Doors_Faded_Screen_Sounds") 
+		}, 200)	
+		item = "Spezi";
+		price = 1;
+		setTimeout( function(){	
+			document.getElementById("pusheditem",).style.display = "block";	
+			alt.emit('sound', "CLOSED", "MP_PROPERTIES_ELEVATOR_DOORS")					
+			machineready = true					
+		}, 1200);
+
+    }
+
+	function TakePushedItem() {
+		if(item == "Orangensaft" || item == "Cola" || item == "Spezi") {
+			document.getElementById("pusheditem",).style.display = "none";
+			document.getElementById("pusheditem").src="";
+			document.getElementById('sprunk').style.animation = 'none'; 
+			document.getElementById('sprunk').style.animationDuration = '0ms';
+			alt.emit('sound', "CLOSED", "MP_PROPERTIES_ELEVATOR_DOORS")	
+			alt.emit('Client:Take', "sprunk", item, price);
+			alt.emit('Client:Close');
+			item = "";
+			price = 0;
+		}		
+    }
+
+	function Close() {
+	    alt.emit('Client:Close');
+    }
+
+</script>
+</body>
+</html>

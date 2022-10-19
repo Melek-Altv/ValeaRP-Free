@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Vending Machine</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+	
+<div id="candybox">
+	<div id="exit" onclick="Close()"></div>
+	<div id="canva">
+		<div id="items1">
+			<center>
+				<img class="item" id="A-1" :src="" alt="" onclick="Select(item = id)">
+				<img class="item" id="A-2" :src="" alt="" onclick="Select(item = id)">
+				<img class="item" id="A-3" :src="" alt="" onclick="Select(item = id)">
+			</center>
+		</div>
+		<div id="items2">
+			<center>
+				<img class="item" id="B-1" :src="" alt="" onclick="Select(id)">
+				<img class="item" id="B-2" :src="" alt="" onclick="Select(id)">
+				<img class="item" id="B-3" :src="" alt="" onclick="Select(id)">
+			</center>
+		</div>
+		<div id="items3">
+			<center>
+				<img class="item" id="C-1" :src="" alt="" onclick="Select(item = id)">
+				<img class="item" id="C-2" :src="" alt="" onclick="Select(item = id)">
+				<img class="item" id="C-3" :src="" alt="" onclick="Select(item = id)">
+			</center>
+		</div>
+		<div id="glass"></div>
+		<div id="screen">______</div>
+		<div id="button" onclick="Buy()"></div>
+		<div id="ad" ><center></center></div>
+		<img id="pusheditem" :src="'images/'+ pusheditem.img +'.png'" alt="" style="display: none;" onclick="TakePushedItem()">
+		<div id="push" style="display: block;"></div>
+	</div>
+</div>
+
+<script>
+let item = "";
+let price = 0;
+    function Buy() {
+		if(item != "") {
+			document.getElementById('candybox').style.animation = 'shakemachine'; 
+		    document.getElementById('candybox').style.animationDuration = '1500ms';	
+			alt.emit('sound', "flares_empty","DLC_SM_Countermeasures_Sounds")
+            setTimeout( function(){ 
+				alt.emit('sound', "Garage_Door_Open", "GTAO_Script_Doors_Faded_Screen_Sounds") 
+			}, 200)
+		    setTimeout( function(){	
+			    document.getElementById("pusheditem",).style.display = "block";
+			    document.getElementById("push",).style.display = "none";
+				alt.emit('sound', "CLOSED", "MP_PROPERTIES_ELEVATOR_DOORS")		
+			    machineready = true					
+		    }, 1200);
+		}
+    }
+
+	function Load() {
+		document.getElementById("A-1").src="images/ecola.png";
+		document.getElementById("A-2").src="images/sprunk.png";
+		document.getElementById("A-3").src="images/orangotang.png";
+		document.getElementById("B-1").src="images/cookies.png";
+		document.getElementById("B-2").src="images/pepsicola.png";
+		document.getElementById("B-3").src="images/water.png";
+		document.getElementById("C-1").src="images/snack.png";
+		document.getElementById("C-2").src="images/chips.png";
+		document.getElementById("C-3").src="images/beer.png";
+    }
+
+	function Select(id) {
+		// Fach1 && Preis
+		if(id == "A-1") {
+			document.getElementById('screen').innerHTML = "1.00"
+			document.getElementById('ad').innerHTML = "Cola 1x"
+			document.getElementById("pusheditem").src="images/ecola.png";
+			item = "Cola";
+			price = 1;
+		}
+		else if(id == "A-2") {
+			document.getElementById('screen').innerHTML = "2.00"
+			document.getElementById('ad').innerHTML = "Spezi 1x"
+			document.getElementById("pusheditem").src="images/sprunk.png";
+			item = "Spezi";
+			price = 2;
+		}
+		else if(id == "A-3") {
+			document.getElementById('screen').innerHTML = "1.00"
+			document.getElementById('ad').innerHTML = "Orangensaft 1x"
+			document.getElementById("pusheditem").src="images/orangotang.png";
+			item = "Orangensaft";
+		}
+		// Fach2 && Preis
+		else if(id == "B-1") {
+			document.getElementById('screen').innerHTML = "1.00"
+			document.getElementById('ad').innerHTML = "Muffin 1x"	
+			document.getElementById("pusheditem").src="images/cookies.png";
+			item = "Muffin";
+			price = 1;
+		}
+		else if(id == "B-2") {
+			document.getElementById('screen').innerHTML = "3.00"
+			document.getElementById('ad').innerHTML = "PepsiCola 1x"
+			document.getElementById("pusheditem").src="images/pepsicola.png";	
+			item = "Cola";	
+			price = 3;
+		}
+		else if(id == "B-3") {
+			document.getElementById('screen').innerHTML = "2.00"	
+			document.getElementById('ad').innerHTML = "Wasser 1x"
+			document.getElementById("pusheditem").src="images/water.png";
+			item = "Wasser";
+			price = 2;
+		}
+		// Fach3 && Preis
+		else if(id == "C-1") {
+			document.getElementById('screen').innerHTML = "4.00"	
+			document.getElementById('ad').innerHTML = "Chips 1x"
+			document.getElementById("pusheditem").src="images/snack.png";
+			item = "Chips";
+			price = 4;
+		}
+		else if(id == "C-2") {
+			document.getElementById('screen').innerHTML = "5.00"	
+			document.getElementById('ad').innerHTML = "Chips 1x"
+			document.getElementById("pusheditem").src="images/chips.png";
+			item = "Chips";
+			price = 5;
+		}
+		else if(id == "C-3") {
+			document.getElementById('screen').innerHTML = "3.00"	
+			document.getElementById('ad').innerHTML = "Bier 1x"
+			document.getElementById("pusheditem").src="images/beer.png";
+			item = "Bier";
+			price = 3;
+		}
+	}
+
+	function TakePushedItem(){
+		document.getElementById('candybox').style.animation = 'none'; 
+		document.getElementById('candybox').style.animationDuration = '0ms';
+		document.getElementById("pusheditem",).style.display = "none";
+		setTimeout( function(){	
+			document.getElementById("push",).style.display = "block";
+			alt.emit('sound', "CLOSED", "MP_PROPERTIES_ELEVATOR_DOORS")		
+		    }, 800);
+		setTimeout( function(){	
+			alt.emit('Client:Take', "candybox", item, price);
+			alt.emit('Client:Close');
+			item = "";	
+			price = 0;				
+		}, 1200);
+	}
+
+	function Close() {
+	    alt.emit('Client:Close');
+    }
+</script>
+<script type="text/javascript">
+	alt.on("CEF:Load:Items", () => {
+        Load();
+    });
+</script>
+</body>
+</html>

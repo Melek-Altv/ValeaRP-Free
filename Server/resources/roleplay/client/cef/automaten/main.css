@@ -1,0 +1,471 @@
+@keyframes shake {
+    0% {
+        -webkit-transform: scale(1.2) translate(2px, 1px) rotate(10deg);
+    }
+    10% {
+        -webkit-transform: scale(1.2) translate(-1px, -2px) rotate(9deg);
+    }
+    20% {
+        -webkit-transform: scale(1.2) translate(-3px, 0px) rotate(11deg);
+    }
+    30% {
+        -webkit-transform: scale(1.2) translate(0px, 2px) rotate(10deg);
+    }
+    40% {
+        -webkit-transform: scale(1.2) translate(1px, -1px) rotate(11deg);
+    }
+    50% {
+        -webkit-transform: scale(1.2) translate(-1px, 2px) rotate(9deg);
+    }
+    60% {
+        -webkit-transform: scale(1.2) translate(-3px, 1px) rotate(10deg);
+    }
+    70% {
+        -webkit-transform: scale(1.2) translate(2px, 1px) rotate(9deg);
+    }
+    80% {
+        -webkit-transform: scale(1.2) translate(-1px, -1px) rotate(11deg);
+    }
+    90% {
+        -webkit-transform: scale(1.2) translate(2px, 2px) rotate(10deg);
+    }
+    100% {
+        -webkit-transform: scale(1.2) translate(1px, -2px) rotate(9deg);
+    }
+}
+
+@keyframes shakemachine {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    10% {
+        -webkit-transform: rotate(-0.5deg);
+    }
+    20% {
+        -webkit-transform: rotate(0.5deg);
+    }
+    30% {
+        -webkit-transform: rotate(0deg);
+    }
+    40% {
+        -webkit-transform: rotate(0.5deg);
+    }
+    50% {
+        -webkit-transform: rotate(-0.5deg);
+    }
+    60% {
+        -webkit-transform: rotate(0deg);
+    }
+    70% {
+        -webkit-transform: rotate(-0.5deg);
+    }
+    80% {
+        -webkit-transform: rotate(0.5deg);
+    }
+    90% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-0.5deg);
+    }
+}
+
+html {
+    user-select: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#candybox,
+#sprunk,
+#ecola,
+#water,
+#beanmachine,
+#raineinside,
+#raineoutside,
+#cigsmachine {
+    height: 100vh;
+    width: 100vw;
+}
+
+#candybox #exit,
+#sprunk #exit,
+#ecola #exit,
+#water #exit,
+#beanmachine #exit,
+#raineinside #exit,
+#raineoutside #exit,
+#cigsmachine #exit {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
+}
+
+#candybox #canva {
+    height: 100vh;
+    width: 57.6306122449vh;
+    background-image: url('images/canvas/candybox.png');
+    background-size: cover;
+    transform: translateX(calc(50vw - 28.8153061225vh));
+    box-shadow: 0 0 10vw 5vw rgba(22, 22, 22, 0.8);
+    position: absolute;
+    z-index: 2;
+}
+
+#candybox #items1 {
+    width: 41.326530612245vh;
+    height: 15.918367346939vh;
+    top: 5.5102040816327vh;
+    left: 3.369387755102vh;
+    position: absolute;
+    padding-top: 3vh;
+}
+
+#candybox #items2 {
+    width: 41.326530612245vh;
+    height: 17.448979591837vh;
+    top: 23.367346938776vh;
+    left: 3.369387755102vh;
+    position: absolute;
+    padding-top: 4.5vh;
+}
+
+#candybox #items3 {
+    width: 41.326530612245vh;
+    height: 17.65306122449vh;
+    top: 42.857142857143vh;
+    left: 3.369387755102vh;
+    position: absolute;
+    padding-top: 4.5vh;
+}
+
+#candybox .item {
+    height: 10vh;
+    width: auto;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    position: relative;
+    transform: rotate(10deg);
+}
+
+#candybox .item:hover {
+    cursor: pointer;
+    transform: scale(1.2) rotate(10deg);
+}
+
+#candybox .item.chosen {
+    transform: scale(1.2) rotate(10deg);
+    z-index: 100;
+}
+
+#candybox #panel {
+    width: 9.8959183673469vh;
+    height: 21.100408163265vh;
+    top: 21.440612244898vh;
+    left: 46.532653061224vh;
+    position: absolute;
+}
+
+#candybox #screen {
+    width: 8.2795918367347vh;
+    height: 3.0512244897959vh;
+    top: 21.740816326531vh;
+    left: 47.040816326531vh;
+    position: absolute;
+    padding-left: 0.7vh;
+    color: rgb(61, 61, 61);
+    font-family: 'VT323', monospace;
+    font-size: 3vh;
+    font-weight: 200;
+    overflow: hidden;
+}
+
+#candybox #button {
+    width: 2.1428571428571vh;
+    height: 2.1428571428571vh;
+    top: 39.285714285714vh;
+    left: 51.326530612245vh;
+    position: absolute;
+    background-image: url('images/canvas/candyboxbutton.png');
+    background-size: cover;
+    cursor: pointer;
+}
+
+#candybox #glass {
+    width: 41.326530612245vh;
+    height: 67.551020408163vh;
+    top: 3.265306122449vh;
+    left: 3.369387755102vh;
+    position: absolute;
+    background: rgba(161, 161, 161, 0.356);
+    box-shadow: 0 10px 38px rgba(240, 231, 142, 0.3) inset;
+    cursor: no-drop;
+    pointer-events: none;
+}
+
+#candybox #push {
+    width: 41.326530612245vh;
+    height: 11.428571428571vh;
+    top: 71.632653061224vh;
+    left: 3.369387755102vh;
+    position: absolute;
+    background-image: url('images/canvas/candyboxpush.png');
+    background-size: cover;
+}
+
+#candybox #pusheditem {
+    height: 10vh;
+    width: auto;
+    top: 72.632653061224vh;
+    left: 19.0326530612vh;
+    position: absolute;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+#candybox #ad {
+    width: 37.959183673469vh;
+    height: 2.6571428571429vh;
+    top: 66.938775510204vh;
+    left: 5.1020408163265vh;
+    position: absolute;
+    border-radius: 0.3vh;
+    padding-top: 0.2vh;
+    background: rgb(227, 229, 227);
+    font-size: 2.2vh;
+    color: rgba(39, 35, 29, 0.904);
+    font-family: 'VT323', monospace;
+    font-weight: bold;
+}
+
+#sprunk #canva {
+    background-image: url('images/canvas/sprunk.png');
+    background-size: cover;
+}
+
+#ecola #canva {
+    background-image: url('images/canvas/ecola.png');
+    background-size: cover;
+}
+
+#sprunk #canva,
+#ecola #canva {
+    height: 100vh;
+    width: 54.6875vh;
+    transform: translateX(calc(50vw - 27.34375vh));
+    box-shadow: 0 0 10vw 5vw rgba(22, 22, 22, 0.8);
+    position: absolute;
+    z-index: 2;
+}
+
+#sprunk #text,
+#ecola #text {
+    top: 29.86875vh;
+    left: 47.303125vh;
+    position: absolute;
+    padding-left: 0.7vh;
+    color: rgba(61, 61, 61, 0.8);
+    font-family: 'VT323', monospace;
+    font-size: 2.5vh;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+#sprunk #sodas,
+#ecola #sodas {
+    width: 7.5vh;
+    height: auto;
+    top: 43vh;
+    left: 45.1171875vh;
+    position: absolute;
+    color: rgba(61, 61, 61, 0.8);
+    overflow: hidden;
+}
+
+#sprunk #sodas .soda0,
+#ecola #sodas .soda0 {
+    width: 90%;
+    height: 4.1015625vh;
+    border: solid 0.4vh rgba(61, 61, 61, 0.8);
+    border-radius: 4px;
+    margin-bottom: 2vh;
+    cursor: pointer;
+    background-image: url('images/canvas/buttonorangotang.png');
+    background-size: 6vh;
+}
+
+#sprunk #sodas .soda1,
+#ecola #sodas .soda1 {
+    width: 90%;
+    height: 4.1015625vh;
+    border: solid 0.4vh rgba(61, 61, 61, 0.8);
+    border-radius: 4px;
+    margin-bottom: 2vh;
+    cursor: pointer;
+    background-image: url('images/canvas/buttonecola.png');
+    background-size: 6vh;
+}
+
+#sprunk #sodas .soda2,
+#ecola #sodas .soda2 {
+    width: 90%;
+    height: 4.1015625vh;
+    border: solid 0.4vh rgba(61, 61, 61, 0.8);
+    border-radius: 4px;
+    margin-bottom: 2vh;
+    cursor: pointer;
+    background-image: url('images/canvas/buttonsprunk.png');
+    background-size: 6vh;
+}
+
+#sprunk #pusheditem,
+#ecola #pusheditem {
+    height: 10vh;
+    width: auto;
+    top: 77vh;
+    left: 25vh;
+    position: absolute;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+#beanmachine #canva {
+    margin-top: 5vh;
+    height: 100vh;
+    width: 41.761658031088vh;
+    background-image: url('images/canvas/beanmachine.png');
+    background-size: cover;
+    transform: translateX(calc(50vw - 20.88082vh));
+    position: absolute;
+    z-index: 2;
+}
+
+#beanmachine #text {
+    top: 21.7vh;
+    left: 34vh;
+    position: absolute;
+    color: gray;
+    font-family: 'VT323', monospace;
+    font-size: 2vh;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+#beanmachine #button {
+    top: 33.7vh;
+    left: 32.4vh;
+    height: 7.1vh;
+    width: 7vh;
+    background: rgba(75, 75, 75, 0.1);
+    border: solid 0.3vh rgba(75, 75, 75, 0.5);
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#beanmachine #coffeecup {
+    top: 61vh;
+    left: 13.4vh;
+    height: 8vh;
+    width: auto;
+    position: absolute;
+    cursor: pointer;
+}
+
+#raineinside #canva {
+    margin-top: 5vh;
+    height: 100vh;
+    width: 28.083209509658vh;
+    background-image: url('images/canvas/raineinside.png');
+    background-size: cover;
+    transform: translateX(calc(50vw - 14.0416047548vh));
+    position: absolute;
+    z-index: 2;
+}
+
+#raineinside #text {
+    top: 65.9582vh;
+    left: 12.2vh;
+    position: absolute;
+    color: #a5b2be;
+    font-family: 'VT323', monospace;
+    font-size: 2vh;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+#raineinside #button {
+    top: 46.5vh;
+    left: 9.4vh;
+    height: 4.7vh;
+    width: 8.8vh;
+    background: rgba(75, 75, 75, 0.1);
+    border: solid 0.3vh rgba(75, 75, 75, 0.5);
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#raineinside #rainebottle {
+    top: 50.6vh;
+    left: 11.85vh;
+    height: 12vh;
+    width: auto;
+    position: absolute;
+    cursor: pointer;
+}
+
+#raineoutside #canva {
+    margin-top: 5vh;
+    height: 100vh;
+    width: 52.941176470588vh;
+    background-image: url('images/canvas/raineoutside.png');
+    background-size: cover;
+    transform: translateX(calc(50vw - 26.47058vh));
+    position: absolute;
+    z-index: 2;
+}
+
+#raineoutside #text {
+    top: 6.2vh;
+    left: 4.2vh;
+    position: absolute;
+    color: rgba(31, 31, 31, 0.808);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
+        Geneva, Verdana, sans-serif;
+    font-size: 3.5vh;
+    font-weight: bolder;
+    transform: rotate(-46deg);
+    overflow: hidden;
+}
+
+#raineoutside #button {
+    top: 39.8vh;
+    left: 32.9vh;
+    height: 2.4vh;
+    width: 6.3vh;
+    background: rgba(75, 75, 75, 0.1);
+    border: solid 0.3vh rgba(75, 75, 75, 0.767);
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#raineoutside #rainebottle {
+    top: 43.8vh;
+    left: 17vh;
+    height: 20vh;
+    width: auto;
+    position: absolute;
+    cursor: pointer;
+}

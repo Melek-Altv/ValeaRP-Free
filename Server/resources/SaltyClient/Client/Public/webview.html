@@ -1,0 +1,115 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Create By Sheytan</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="nui-holder">
+    <div class="salty-nui-container lang-de" style="text-align: center; display: none;">
+    <div id="Canvas" class="bg">
+        <div id="saltychat">
+		    <div class="salty-nui-container lang-de" style="text-align: center; display: none;">
+            <div class="loading-pulse"></div>
+            <div id="EndlessRP_1">
+                <svg class="EndlessRP_1_j">
+                    <rect id="EndlessRP_1_j" rx="12" ry="12" x="0" y="0" width="414" height="502"></rect>
+                </svg>
+                <img id="Hader" src="../Public/img/hader.png">
+            </div>
+            <div id="Gruppe_13">
+                <div id="Gruppe_12">
+                    <svg class="EndlessRP_2">
+                        <rect id="EndlessRP_2" rx="5" ry="5" x="0" y="0" width="337" height="55">
+                        </rect>
+                    </svg>
+                    <div id="Um_auf_dem_Server_zu_spielen_m"> <span>Um auf dem Server zu spielen musst</span><br><span>du auf unserem </span><span style="color: #9e55ce;">Teamspeak </span><span>sein. <br> </span><span class="tsip"></span>
+                    </div>
+                </div>
+                <div id="Gruppe_12_t">
+                    <svg class="EndlessRP_2_u">
+                        <rect id="EndlessRP_2_u" rx="5" ry="5" x="0" y="0" width="337" height="55">
+                        </rect>
+                    </svg>
+                    <div id="Auerdem_muss_das_Saltychat_TS-"><span>Außerdem muss das </span><span style="color: #9e55ce;">Saltychat TS-</span><br><span style="color: #9e55ce;">Plugin 3.1.0</span><span> installiert und aktiviert sein.</span>
+                    </div>
+                </div>
+                <div id="Gruppe_12_w">
+                    <svg class="EndlessRP_2_x">
+                        <rect id="EndlessRP_2_x" rx="5" ry="5" x="0" y="0" width="337" height="55">
+                        </rect>
+                    </svg>
+                    <div id="Achte_darauf_dass_du_keine_and"> <span>Du wurdest gemoved &amp; siehst diesen Screen</span><br><span>immernoch? Versuche dich zu &amp; Entmuten</span>
+                    </div>
+                </div>
+                <div id="Gruppe_12_z">
+                    <svg class="EndlessRP_2_">
+                        <rect id="EndlessRP_2_" rx="5" ry="5" x="0" y="0" width="337" height="55">
+                        </rect>
+                    </svg>
+                    <div id="Bei_Fragen_oder_Problemen_kont"><span>Bei Fragen oder Problemen</span><br><span>kontaktiere gerne unser </span><span style="color: #9e55ce;">Support-Team</span>
+                    </div>
+                </div>
+                <div id="Gruppe_6">
+                    <svg class="EndlessRP_5">
+                        <rect id="EndlessRP_5" rx="5" ry="5" x="0" y="0" width="60" height="20">
+                        </rect>
+                    </svg>
+                    <div id="EndlessRP-V"><span>EndlessRP</span>
+                    </div>
+                </div>
+            </div>
+            <div id="Gruppe_14">
+                <svg class="EndlessRP_5_">
+                    <rect id="EndlessRP_5_" rx="5" ry="5" x="0" y="0" width="337" height="29">
+                    </rect>
+                </svg>
+                <div id="SALTYCHAT_IST_NICHT_VERBUNDEN"><span>SALTYCHAT IST NICHT VERBUNDEN</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function NUI(state, language = null, ts3ip = null) {
+            if (state) {
+                $(".tsip").each(function (index) {
+                    $(this).text(ts3ip);
+                });
+                $(".nui-holder").css("display", "flex");
+                $(".salty-nui-container").each(function (index) {
+                    $(this).css("display", "none");
+                });
+                switch (language) {
+                    case "de":
+                        $(".lang-de").css("display", "block");
+                        return;
+                    case "en":
+                        $(".lang-en").css("display", "block");
+                        return;
+                    case "fr":
+                        $(".lang-fr").css("display", "block");
+                        return;
+                }
+            } else {
+                $(".nui-holder").css("display", "none");
+                $(".salty-nui-container").each(function (index) {
+                    $(this).css("display", "none");
+                });
+            }
+        }
+    
+        document.addEventListener("DOMContentLoaded", function () {
+            $(".nui-holder").css("display", "none");
+            $(".salty-nui-container").each(function (index) {
+                $(this).css("display", "none");
+            });
+        });
+    
+        alt.on('showOverlay', NUI)
+    </script>
+</body>
+
+</html>

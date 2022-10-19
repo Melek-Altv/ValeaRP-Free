@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Vending Machine</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="main.css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+<div id="beanmachine">
+	<div id="exit" onclick="Close()"></div>
+	<div id="canva">
+		<div id="text">Price 1$</div>	
+		<div id="button" onclick="Buy()"></div>
+		<img id="coffeecup" src="images/canvas/beanmachinecup.png" style="display: none;" alt="" onclick="TakeCup()">
+	</div>
+</div>
+
+<script>
+let cupready = false;
+    
+    function Buy() {
+	    document.getElementById("beanmachine").style.animation = 'shakemachine'; 
+		document.getElementById("beanmachine").style.animationDuration = '1200ms'; 
+        document.getElementById("coffeecup",).style.display = "block";
+		alt.emit('sound', "flares_empty","DLC_SM_Countermeasures_Sounds")
+			setTimeout( function(){
+			alt.emit('sound', "collect_water", "dlc_sum20_yacht_missions_ah_sounds") 
+		}, 200)
+		setTimeout( function(){						
+			cupready = true					
+		}, 1200);
+    }
+
+	function Close() {
+	    alt.emit('Client:Close');
+    }
+
+	function TakeCup(){
+        if (cupready == true) {	        
+	        document.getElementById("coffeecup",).style.display = "none";			
+			alt.emit('Client:Take', "Beanmachine", "Kaffee", 1);
+			alt.emit('Client:Close');
+			cupready = false
+        }
+    } 
+
+</script>
+</body>
+</html>

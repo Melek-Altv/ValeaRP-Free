@@ -1,0 +1,342 @@
+﻿<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../utils/bootstrap2.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Inventar</title>
+</head>
+
+<body>
+    <ul class='custom-menu'>
+        <li id="customMenuUseItem"><i class="fas fa-hand-rock" style="padding-right: 8px"></i>Benutzen</li>
+        <li id="customMenuGiveItem"><i class="fas fa-user-friends"></i>Geben</li>
+        <li id="customMenuDropItem"><i class="fas fa-chevron-down" style="padding-right: 10px"></i>Auf den Boden legen</li>
+        <li id="customMenuSwitchBagItem"><i class="fas fa-suitcase" style="padding-right: 6px"></i>
+            <font id="customMenuSwitchBagItem-Text">In den Rucksack</font>
+        </li>
+    </ul>
+
+    <div id="InventoryBox">
+        <div class="headContainer float-top">
+            <span id="allSiteTitle" style="font-weight: bolder; letter-spacing: 0.7px;">Hosentasche (<font id="inventoryWeight">0</font>/<font id="inventoryMaxWeight">200</font>kg)</span>
+        </div>
+        <div class="headContainer float-left" onclick="changeSite(`inventory`);">
+            <span id="inventorySiteTitle" class="active"><i style="font-size: 17px;" class="fas fa-grip-vertical"></i> </span>
+        </div>
+        <div id="backpackHeadContainer" class="headContainer float-left" onclick="changeSite(`backpack`);">
+            <span id="backpackSiteTitle"><i style="font-size: 17px;" class="fas fa-suitcase"></i></span>
+        </div>
+        <div id="schluesseHeadContainer" class="headContainer float-right" onclick="changeSite(`schluessel`);">
+            <span id="schluesselSiteTitle"><i style="font-size: 17px;" class="fas fa-key"></i></span>
+        </div>
+        <div id="brieftascheHeadContainer" class="headContainer float-right" onclick="changeSite(`brieftasche`);">
+            <span id="brieftascheSiteTitle"><i style="font-size: 17px;" class="fas fa-address-card"></i></span>
+        </div>
+        <hr style="margin-bottom: 1px; margin-top: -1px; float:right; width:100%;" />
+
+
+        <div class="ContentArea">
+            <ul id="inventorySiteItemList" class="list-group">
+                <!-- <li class='list-group-item invitem' data-uidname='Apfel' data-isgiveable='true' data-isuseable='true' data-isdroppable='true' data-place='inventory' onclick='openContextMenus(this);'>
+                <img src='../utils/img/inventory/${invArray[i].itemPicName}' onerror="if(!this.check) {this.check = true; this.src = '../utils/img/inventory/defaultErrorItem.png';}"><p>Apfel 10x</p></li> -->
+            </ul>
+            <ul id="backpackSiteItemList" class="list-group" style="display: none">
+                <!-- <li class='list-group-item invitem' data-uidname='Apfel' data-isgiveable='true' data-isuseable='true' data-isdroppable='true' data-place='inventory' onclick='openContextMenus(this);'>
+                <img src='../utils/img/inventory/${invArray[i].itemPicName}' onerror="if(!this.check) {this.check = true; this.src = '../utils/img/inventory/defaultErrorItem.png';}"><p>Apfel 10x</p></li> -->
+            </ul>
+            <ul id="schluesselSiteItemList" class="list-group" style="display: none">
+                <!-- <li class='list-group-item invitem' data-uidname='Apfel' data-isgiveable='true' data-isuseable='true' data-isdroppable='true' data-place='inventory' onclick='openContextMenus(this);'>
+                <img src='../utils/img/inventory/${invArray[i].itemPicName}' onerror="if(!this.check) {this.check = true; this.src = '../utils/img/inventory/defaultErrorItem.png';}"><p>Apfel 10x</p></li> -->
+            </ul>
+            <ul id="brieftascheSiteItemList" class="list-group" style="display: none">
+                <!-- <li class='list-group-item invitem' data-uidname='Apfel' data-isgiveable='true' data-isuseable='true' data-isdroppable='true' data-place='inventory' onclick='openContextMenus(this);'>
+                <img src='../utils/img/inventory/${invArray[i].itemPicName}' onerror="if(!this.check) {this.check = true; this.src = '../utils/img/inventory/defaultErrorItem.png';}"><p>Apfel 10x</p></li> -->
+            </ul>
+        </div>
+
+        <div class="amountbox" style="display: none;">
+            <p class="title">Anzahl auswählen</p>
+            <input style="display: block; color: white;" id="SelectedItemAmount" type="number" min="1" value="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+            <button class="done" onclick="sendDone(true); document.getElementById('SelectedItemAmount').value = '1'">OK</button>
+            <button class="done1" onclick="sendDone(false); document.getElementById('SelectedItemAmount').value = '1'">Abrechen</button>
+        </div>
+    </div>
+
+    <script src="../utils/jquery-3.4.1.min.js"></script>
+    <script src="../utils/popper.min.js"></script>
+    <script src="../utils/bootstrap.min.js"></script>
+    <script src="../utils/anime.min.js"></script>
+    <script src="https://kit.fontawesome.com/640357ffb4.js"></script>
+</body>
+
+<script>
+    var hasPlayerBackpack = false,
+        lastselectedUIDName = undefined,
+        lastselectedPlace = undefined,
+        lastselectedPlayerID = 0,
+        curActiveSite = "inventory",
+        canDoItemInteract = true;
+
+    $(document).ready(function() {
+        setTimeout(() => {
+            alt.emit("Client:Inventory:cefIsReady");
+        }, 100);
+    });
+
+    function openContextMenus(target) {
+        isItemUseable = $(target).attr('data-isuseable');
+        isItemDroppable = $(target).attr('data-isdroppable');
+        isItemGiveable = $(target).attr('data-isgiveable');
+        lastselectedPlace = $(target).attr('data-place');
+        lastselectedUIDName = $(target).attr('data-uidname');
+
+        if (isItemGiveable == "true") {
+            $("#customMenuGiveItem").show();
+            $("#customMenuGiveItem").attr("onClick", "DoFirstItemAction(`giveitem`, `" + $(target).attr('data-place') + "`, `" + $(target).attr('data-uidname') + "`);");
+        } else {
+            $("#customMenuGiveItem").hide();
+            $("#customMenuGiveItem").attr("onClick", "");
+        }
+
+        if (isItemUseable == "true") {
+            $("#customMenuUseItem").show();
+            $("#customMenuUseItem").attr("onClick", "DoFirstItemAction(`use`, `" + $(target).attr('data-place') + "`, `" + $(target).attr('data-uidname') + "`);");
+        } else {
+            $("#customMenuUseItem").hide();
+            $("#customMenuUseItem").attr("onClick", "");
+        }
+
+        if (isItemDroppable == "true") {
+            $("#customMenuDropItem").show();
+            $("#customMenuDropItem").attr("onClick", "DoFirstItemAction(`drop`, `" + $(target).attr('data-place') + "`, `" + $(target).attr('data-uidname') + "`);");
+        } else {
+            $("#customMenuDropItem").hide();
+            $("#customMenuDropItem").attr("onClick", "");
+        }
+
+        if (curActiveSite == "inventory") {
+            $("#customMenuSwitchBagItem-Text").html("In den Rucksack");
+            $("#customMenuSwitchBagItem").attr("onClick", "DoFirstItemAction(`switchToBackpack`, `" + $(target).attr('data-place') + "`, `" + $(target).attr('data-uidname') + "`);");
+        } else if (curActiveSite == "backpack") {
+            $("#customMenuSwitchBagItem-Text").html("Ins Inventar");
+            $("#customMenuSwitchBagItem").attr("onClick", "DoFirstItemAction(`switchToInventory`, `" + $(target).attr('data-place') + "`, `" + $(target).attr('data-uidname') + "`);");
+        }
+
+        if (hasPlayerBackpack == true) {
+            $("#customMenuSwitchBagItem").show();
+        } else if (hasPlayerBackpack == false) {
+            $("#customMenuSwitchBagItem").hide();
+        }
+
+        $(".custom-menu").finish().show(100).css({
+            top: event.pageY + "px",
+            left: event.pageX + "px"
+        });
+    }
+    
+    function DoFirstItemAction(action, fromContainer, uiditemname) {
+        if (!canDoItemInteract) return;
+        canDoItemInteract = false;
+        switch (action) {
+            case "use":
+                DoActionID = 1;
+                DoActionItemname = uiditemname;
+                DoActionContainer = fromContainer;
+                break;
+            case "drop":
+                DoActionID = 3;
+                DoActionItemname = uiditemname;
+                DoActionContainer = fromContainer;
+                break;
+            case "switchToBackpack":
+                DoActionID = 4;
+                DoActionItemname = uiditemname;
+                DoActionContainer = fromContainer;
+                break;
+            case "switchToInventory":
+                DoActionID = 5;
+                DoActionItemname = uiditemname;
+                DoActionContainer = fromContainer;
+                break;
+            case "giveitem":
+                DoActionID = 2;
+                DoActionItemname = uiditemname;
+                DoActionContainer = fromContainer;
+                break;
+        }
+        $(".custom-menu").hide();
+        $(".amountbox").show();
+    }
+    
+    function sendDone(type) {
+        if (type == false) {
+            DoActionID = 0;
+            DoActionItemname = undefined;
+            DoActionContainer = undefined;
+            $(".amountbox").hide();
+            setTimeout(() => {
+                lastselectedPlayerID = 0;
+                canDoItemInteract = true;
+            }, 2);
+            return;
+        }
+
+        else if (type == true) {
+            var itemAmount = $("#SelectedItemAmount").val();
+            switch (DoActionID) {
+                case 1:
+                    alt.emit("Client:Inventory:UseInvItem", DoActionItemname, itemAmount, DoActionContainer);
+                    break;
+                case 3:
+                    alt.emit("Client:Inventory:DropInvItem", DoActionItemname, itemAmount, DoActionContainer);
+                    break;
+                case 4:
+                    alt.emit("Client:Inventory:switchItemToDifferentInv", DoActionItemname, itemAmount, DoActionContainer, "backpack");
+                    break;
+                case 5:
+                    alt.emit("Client:Inventory:switchItemToDifferentInv", DoActionItemname, itemAmount, DoActionContainer, "inventory");
+                    break;
+                case 2:
+                    alt.emit("Client:Inventory:giveItem", DoActionItemname, itemAmount, DoActionContainer);
+                    break;
+            }
+
+            //reset to default
+            DoActionID = 0;
+            DoActionItemname = undefined;
+            DoActionContainer = undefined;
+            $(".amountbox").hide();
+            setTimeout(() => {
+                lastselectedPlayerID = 0;
+                canDoItemInteract = true;
+            }, 2);
+        }
+    }
+
+    function changeSite(site) {
+        lastselectedPlace = undefined;
+        lastselectedUIDName = undefined;
+        $(".custom-menu").hide();
+        $("#customMenuUseItem").hide();
+        $("#customMenuUseItem").attr("onClick", "");
+        $("#customMenuDropItem").hide();
+        $("#customMenuDropItem").attr("onClick", "");
+        $("#customMenuSwitchBagItem").hide();
+        $(`#${curActiveSite}SiteTitle`).removeClass("active");
+        $(`#${curActiveSite}SiteItemList`).hide(0, "linear");
+        $(`#${site}SiteTitle`).addClass("active");
+        setTimeout(() => {
+            $(`#${site}SiteItemList`).show(2, "linear");
+        }, 2);
+        curActiveSite = site;
+
+        if (site == "inventory") {
+            $("#allSiteTitle").html(`Hosentasche (${inventoryWeight.toFixed(2)}/15kg)`)
+        } if (site == "brieftasche") {
+            $("#allSiteTitle").html("Brieftasche")
+        } if (site == "backpack") {
+            $("#allSiteTitle").html(`Rucksack (${backpackWeight.toFixed(2)}/${backpackSizeVol}kg)`)
+        } if (site == "schluessel") {
+            $("#allSiteTitle").html("Schlüsselbund")
+        } if (site == "clothes") {
+            $("#allSiteTitle").html("Kleidung")
+        } 
+    }
+    let inventoryWeight = 0.0,
+        backpackSizeVol = 0.0,
+        backpackWeight = 0.0;
+
+    function SetInventoryInformations(invArray, backpackSize) {
+        invArray = JSON.parse(invArray);
+        inventoryWeight = 0.0;
+        backpackWeight = 0.0;
+        let invHTML = "",
+            backpackHTML = "",
+            schluesselHTML = "",
+            brieftascheHTML = "";
+        for (var i in invArray) {
+            let displayName = invArray[i].itemName;
+            // if (displayName.length > 11) displayName = displayName.substring(0, 10).concat('...');
+            if (invArray[i].itemLocation == "inventory") {
+                invHTML += "<li class='list-group-item invitem' data-uidname='" + invArray[i].itemName + "' data-isgiveable='" + invArray[i].isItemGiveable + "' data-isuseable='" + invArray[i].isItemUseable + "' data-isdroppable='" + invArray[i].isItemDroppable + "' data-place='inventory' onclick='openContextMenus(this);'>" +
+                    `<img src='../utils/img/inventory/${invArray[i].itemPicName}' onerror="if(!this.check) {this.check = true; this.src = '../utils/img/inventory/defaultErrorItem.png';}"><p>${displayName} (${invArray[i].itemAmount}x)</p>`;
+                invHTML += "</li>";
+
+                inventoryWeight += (invArray[i].itemWeight * invArray[i].itemAmount);
+            } 
+            else if (invArray[i].itemLocation == "backpack") {
+                backpackHTML += "<li class='list-group-item invitem' data-uidname='" + invArray[i].itemName + "' data-isgiveable='" + invArray[i].isItemGiveable + "' data-isuseable='" + invArray[i].isItemUseable + "' data-isdroppable='" + invArray[i].isItemDroppable + "' data-place='backpack' onclick='openContextMenus(this);'>" +
+                    `<img src='../utils/img/inventory/${invArray[i].itemPicName}' onerror="if(!this.check) {this.check = true; this.src = '../utils/img/inventory/defaultErrorItem.png';}"><p>${displayName} (${invArray[i].itemAmount}x)</p>`;
+                backpackHTML += "</li>";
+                backpackWeight += (invArray[i].itemWeight * invArray[i].itemAmount);
+            } 
+            else if (invArray[i].itemLocation == "schluessel") {
+                schluesselHTML += "<li class='list-group-item invitem' data-uidname='" + invArray[i].itemName + "' data-isgiveable='" + invArray[i].isItemGiveable + "' data-isuseable='" + invArray[i].isItemUseable + "' data-isdroppable='" + invArray[i].isItemDroppable + "' data-place='schluessel' onclick='openContextMenus(this);'>" +
+                    `<img src='../utils/img/inventory/${invArray[i].itemPicName}' onerror="if(!this.check) {this.check = true; this.src = '../utils/img/inventory/defaultErrorItem.png';}"><p>${displayName} (${invArray[i].itemAmount}x)</p>`;
+                schluesselHTML += "</li>";
+            }
+            else if (invArray[i].itemLocation == "brieftasche") {
+                brieftascheHTML += "<li class='list-group-item invitem' data-uidname='" + invArray[i].itemName + "' data-isgiveable='" + invArray[i].isItemGiveable + "' data-isuseable='" + invArray[i].isItemUseable + "' data-isdroppable='" + invArray[i].isItemDroppable + "' data-place='brieftasche' onclick='openContextMenus(this);'>" +
+                    `<img src='../utils/img/inventory/${invArray[i].itemPicName}' onerror="if(!this.check) {this.check = true; this.src = '../utils/img/inventory/defaultErrorItem.png';}"><p>${displayName} (${invArray[i].itemAmount}x)</p>`;
+                brieftascheHTML += "</li>";
+            }
+        }
+
+        if (backpackSize > 0) {
+            hasPlayerBackpack = true;
+            backpackSizeVol = backpackSize;
+            $("#backpackHeadContainer").attr('onClick', 'changeSite(`backpack`);');
+        } else if (backpackSize <= 0) {
+            hasPlayerBackpack = false;
+            $("#backpackHeadContainer").attr('onClick', '');
+        }
+
+        $("#inventoryMaxWeight").html("15");
+        $("#inventoryWeight").html(inventoryWeight.toFixed(2));
+        $("#backpackMaxWeight").html(backpackSize);
+        $("#inventorySiteItemList").html(invHTML);
+        $("#backpackSiteItemList").html(backpackHTML);
+        $("#schluesselSiteItemList").html(schluesselHTML);
+        $("#brieftascheSiteItemList").html(brieftascheHTML);
+    }
+
+    function DoSomeItemAction(action, fromContainer, uiditemname) {
+        var itemAmount = $("#SelectedItemAmount").val();
+        if (!canDoItemInteract) return;
+        canDoItemInteract = false;
+        switch (action) {
+            case "use":
+                alt.emit("Client:Inventory:UseInvItem", uiditemname, itemAmount, fromContainer);
+                break;
+            case "drop":
+                alt.emit("Client:Inventory:DropInvItem", uiditemname, itemAmount, fromContainer);
+                break;
+            case "switchToBackpack":
+                alt.emit("Client:Inventory:switchItemToDifferentInv", uiditemname, itemAmount, fromContainer, "backpack");
+                break;
+            case "switchToInventory":
+                alt.emit("Client:Inventory:switchItemToDifferentInv", uiditemname, itemAmount, fromContainer, "inventory");
+                break;
+            case "giveitem":
+                alt.emit("Client:Inventory:giveItem", uiditemname, itemAmount, fromContainer);
+                break;
+        }
+        $(".custom-menu").hide();
+        setTimeout(() => {
+            lastselectedPlayerID = 0;
+            canDoItemInteract = true;
+        }, 1000);
+    }
+
+    alt.on("CEF:Inventory:AddInventoryItems", (invArray, backpackSize, targetPlayer) => {
+        lastselectedPlayerID = parseInt(targetPlayer);
+        SetInventoryInformations(invArray, backpackSize);
+    });
+</script>
+
+</html>

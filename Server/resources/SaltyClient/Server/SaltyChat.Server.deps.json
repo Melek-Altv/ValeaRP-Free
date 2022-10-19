@@ -1,0 +1,77 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "SaltyChat.Server/1.0.0": {
+        "dependencies": {
+          "AltV.Net": "11.3.0"
+        },
+        "runtime": {
+          "SaltyChat.Server.dll": {}
+        }
+      },
+      "AltV.Net/11.3.0": {
+        "dependencies": {
+          "AltV.Net.Shared": "11.3.0"
+        },
+        "runtime": {
+          "lib/net6.0/AltV.Net.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "AltV.Net.CApi/11.3.0": {
+        "runtime": {
+          "lib/net6.0/AltV.Net.CApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "AltV.Net.Shared/11.3.0": {
+        "dependencies": {
+          "AltV.Net.CApi": "11.3.0"
+        },
+        "runtime": {
+          "lib/net6.0/AltV.Net.Shared.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SaltyChat.Server/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AltV.Net/11.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DeSVzC6v9lKUcB6AelpJHLfZxW70c4G/d9Em8DGpbax8fmlDd3cpNdV54Mue/hutzu7jinYZS/oyXXnLChw2vg==",
+      "path": "altv.net/11.3.0",
+      "hashPath": "altv.net.11.3.0.nupkg.sha512"
+    },
+    "AltV.Net.CApi/11.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PlbBOFnXrF9fdKISrScLN0tj9faoBy6scUYTO4lZLdJxKWEbafH1/ee+PJFHNDJMYcCIQ/V1IJWP2zzdhVV0hQ==",
+      "path": "altv.net.capi/11.3.0",
+      "hashPath": "altv.net.capi.11.3.0.nupkg.sha512"
+    },
+    "AltV.Net.Shared/11.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1FfegmYJYALMkTkjZ/djrtsy1pLZiZi5Miz37zncs0tIqpwjPfQ0daos7ZL+QYNR83dBXkqBdbcwHdwVkvTB0g==",
+      "path": "altv.net.shared/11.3.0",
+      "hashPath": "altv.net.shared.11.3.0.nupkg.sha512"
+    }
+  }
+}

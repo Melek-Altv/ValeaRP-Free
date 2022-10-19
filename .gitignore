@@ -1,0 +1,16 @@
+*.cache
+*.resource
+*.log
+Server/server.log
+Server/cache/airport.resource
+Altv-Roleplay/.vs/Altv-Roleplay/v16/.suo
+Altv-Roleplay/.vs/Altv-Roleplay/DesignTimeBuild/.dtbcache.v2
+*.log
+*.log
+*.log
+*.dll
+*.pdb
+*.log
+*.pdb
+*.dll
+*.log

@@ -1,0 +1,16 @@
+body {
+    display: none;
+}
+
+/* Here you can adjust the position of the stars */
+#stars {
+    /* position: left; */
+    position: absolute;
+    right: 10vh;
+    top: 1vh;
+}
+
+/* Here you can set up the size of the stars: Higher value means bigger stars */
+img {
+    height: 2vh;
+}
