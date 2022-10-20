@@ -92,11 +92,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexa\\Desktop\\Sa-Market-A\\Altv-Roleplay\\SaltyServer\\SaltyChat.Server.csproj",
+      "projectUniqueName": "C:\\Users\\alexa\\Desktop\\ValeaRP-A\\Altv-Roleplay\\SaltyServer\\SaltyChat.Server.csproj",
       "projectName": "SaltyChat.Server",
-      "projectPath": "C:\\Users\\alexa\\Desktop\\Sa-Market-A\\Altv-Roleplay\\SaltyServer\\SaltyChat.Server.csproj",
+      "projectPath": "C:\\Users\\alexa\\Desktop\\ValeaRP-A\\Altv-Roleplay\\SaltyServer\\SaltyChat.Server.csproj",
       "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexa\\Desktop\\Sa-Market-A\\Altv-Roleplay\\SaltyServer\\obj\\",
+      "outputPath": "C:\\Users\\alexa\\Desktop\\ValeaRP-A\\Altv-Roleplay\\SaltyServer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",

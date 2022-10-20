@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-	  <OutputPath>../../../Sa-Market-A\Server\resources\roleplay\server</OutputPath>
+	  <OutputPath>../../../ValeaRP-A\Server\resources\roleplay\server</OutputPath>
 	  <WarningLevel>5</WarningLevel>
   </PropertyGroup>
 

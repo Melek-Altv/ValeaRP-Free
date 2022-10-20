@@ -342,7 +342,7 @@ namespace Altv_Roleplay.Handler
             lock (client)
             {
                 if (client == null || !client.Exists) return;
-                client.LastPosition = new Position((float)402.778, (float)-996.9758, (float)-98);//by Sheytan
+                client.LastPosition = new Position((float)402.778, (float)-996.9758, (float)-98);//by ValeaRP
                 client.Dimension = Characters.GetCharacterLastDimension(charid);
                 client.Health = (ushort)(Characters.GetCharacterHealth(charid) + 100);
                 client.Armor = (ushort)Characters.GetCharacterArmor(charid);

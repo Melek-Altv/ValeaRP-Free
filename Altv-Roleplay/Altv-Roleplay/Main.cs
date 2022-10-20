@@ -273,7 +273,7 @@ namespace Altv_Roleplay
         {
             if (player == null) return;
             player.Position = new Position(x, y, z);
-            player.LastPosition = new Position(x, y, z);//by Sheytan
+            player.LastPosition = new Position(x, y, z);//by ValeaRP
         }     
 
         public override void OnStop()

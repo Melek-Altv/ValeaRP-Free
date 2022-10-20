@@ -9,7 +9,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<OutputPath>../../../Sa-Market-A\Server\resources\SaltyClient\Server</OutputPath>
+		<OutputPath>../../../ValeaRP-A\Server\resources\SaltyClient\Server</OutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>

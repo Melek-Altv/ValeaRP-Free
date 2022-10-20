@@ -2,8 +2,8 @@
   "profiles": {
     "Altv-Roleplay": {
       "commandName": "Executable",
-      "executablePath": "C:\\Users\\alexa\\Desktop\\Sa-Market-A\\Server\\altv-server.exe",
-      "workingDirectory": "C:\\Users\\alexa\\Desktop\\Sa-Market-A\\Server"
+      "executablePath": "C:\\Users\\alexa\\Desktop\\ValeaRP-A\\Server\\altv-server.exe",
+      "workingDirectory": "C:\\Users\\alexa\\Desktop\\ValeaRP-A\\Server"
     }
   }
 }

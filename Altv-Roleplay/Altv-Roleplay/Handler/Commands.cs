@@ -334,7 +334,7 @@ namespace Altv_Roleplay.Handler
             player.LastPosition = player.Position;
             veh.EngineOn = true;
             veh.LockState = VehicleLockState.Unlocked;
-            veh.SetNumberplateTextAsync("SA-Market");
+            veh.SetNumberplateTextAsync("ValeaRP");
             veh.PrimaryColor = 44;
             veh.SecondaryColor = 44;
             veh.WheelColor = 44;

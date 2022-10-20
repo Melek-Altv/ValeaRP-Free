@@ -15,7 +15,7 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Exportiere Struktur von Tabelle Sa-Market-A.accounts
+-- Exportiere Struktur von Tabelle ValeaRP-A.accounts
 CREATE TABLE IF NOT EXISTS `accounts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(64) NOT NULL DEFAULT 'N/A',
@@ -32,9 +32,9 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.accounts: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.accounts: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.accounts_characters
+-- Exportiere Struktur von Tabelle ValeaRP-A.accounts_characters
 CREATE TABLE IF NOT EXISTS `accounts_characters` (
   `charId` int(11) NOT NULL AUTO_INCREMENT,
   `accountId` int(11) NOT NULL,
@@ -84,9 +84,9 @@ CREATE TABLE IF NOT EXISTS `accounts_characters` (
   PRIMARY KEY (`charId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.accounts_characters: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.accounts_characters: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.attachments
+-- Exportiere Struktur von Tabelle ValeaRP-A.attachments
 CREATE TABLE IF NOT EXISTS `attachments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `model` varchar(64) NOT NULL,
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `attachments` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.attachments: ~11 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.attachments: ~11 rows (ungefähr)
 INSERT INTO `attachments` (`id`, `model`, `bone`, `pos`, `rot`, `removeAfterSeconds`) VALUES
 	(1, 'ba_prop_club_water_bottle', 57005, '{ x: 0.15, y: -0.09, z: -0.04, }', '{ x: 100, y: -220, z: 180}', 3500),
 	(2, 'prop_beer_bottle', 57005, '{ "x": 0.13, "y": -0.12, "z": -0.05 }', '{ "x": 100, "y": -220, "z": 180}', 3500),
@@ -111,7 +111,7 @@ INSERT INTO `attachments` (`id`, `model`, `bone`, `pos`, `rot`, `removeAfterSeco
 	(10, 'p_cs_joint_01', 57005, '{ x: 0.06, y: 0.01, z: -0.01, }', '{ x: 0, y: 255, z: 65}', 8500),
 	(11, 'ng_proc_cigarette01a', 58867, '{ x: 0.06, y: 0.01, z: -0.01, }', '{ x: 0, y: 255, z: 65}', 8000);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.characters_bank
+-- Exportiere Struktur von Tabelle ValeaRP-A.characters_bank
 CREATE TABLE IF NOT EXISTS `characters_bank` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `charid` int(11) NOT NULL,
@@ -125,9 +125,9 @@ CREATE TABLE IF NOT EXISTS `characters_bank` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.characters_bank: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.characters_bank: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.characters_inventory
+-- Exportiere Struktur von Tabelle ValeaRP-A.characters_inventory
 CREATE TABLE IF NOT EXISTS `characters_inventory` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `charid` int(11) NOT NULL,
@@ -137,9 +137,9 @@ CREATE TABLE IF NOT EXISTS `characters_inventory` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.characters_inventory: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.characters_inventory: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.characters_lastpos
+-- Exportiere Struktur von Tabelle ValeaRP-A.characters_lastpos
 CREATE TABLE IF NOT EXISTS `characters_lastpos` (
   `charid` int(11) NOT NULL,
   `lastPosX` float NOT NULL,
@@ -149,9 +149,9 @@ CREATE TABLE IF NOT EXISTS `characters_lastpos` (
   PRIMARY KEY (`charid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.characters_lastpos: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.characters_lastpos: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.characters_licenses
+-- Exportiere Struktur von Tabelle ValeaRP-A.characters_licenses
 CREATE TABLE IF NOT EXISTS `characters_licenses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `charId` int(11) NOT NULL,
@@ -166,9 +166,9 @@ CREATE TABLE IF NOT EXISTS `characters_licenses` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.characters_licenses: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.characters_licenses: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.characters_minijobs
+-- Exportiere Struktur von Tabelle ValeaRP-A.characters_minijobs
 CREATE TABLE IF NOT EXISTS `characters_minijobs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `charId` int(11) NOT NULL,
@@ -177,9 +177,9 @@ CREATE TABLE IF NOT EXISTS `characters_minijobs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.characters_minijobs: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.characters_minijobs: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.characters_ownedclothes
+-- Exportiere Struktur von Tabelle ValeaRP-A.characters_ownedclothes
 CREATE TABLE IF NOT EXISTS `characters_ownedclothes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `charId` int(11) NOT NULL,
@@ -187,9 +187,9 @@ CREATE TABLE IF NOT EXISTS `characters_ownedclothes` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.characters_ownedclothes: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.characters_ownedclothes: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.characters_permissions
+-- Exportiere Struktur von Tabelle ValeaRP-A.characters_permissions
 CREATE TABLE IF NOT EXISTS `characters_permissions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `charId` int(11) NOT NULL,
@@ -197,9 +197,9 @@ CREATE TABLE IF NOT EXISTS `characters_permissions` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.characters_permissions: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.characters_permissions: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.characters_phone_chatmessages
+-- Exportiere Struktur von Tabelle ValeaRP-A.characters_phone_chatmessages
 CREATE TABLE IF NOT EXISTS `characters_phone_chatmessages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `chatId` int(11) NOT NULL,
@@ -210,9 +210,9 @@ CREATE TABLE IF NOT EXISTS `characters_phone_chatmessages` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.characters_phone_chatmessages: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.characters_phone_chatmessages: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.characters_phone_chats
+-- Exportiere Struktur von Tabelle ValeaRP-A.characters_phone_chats
 CREATE TABLE IF NOT EXISTS `characters_phone_chats` (
   `chatId` int(11) NOT NULL AUTO_INCREMENT,
   `phoneNumber` int(11) NOT NULL,
@@ -220,9 +220,9 @@ CREATE TABLE IF NOT EXISTS `characters_phone_chats` (
   PRIMARY KEY (`chatId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.characters_phone_chats: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.characters_phone_chats: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.characters_phone_contacts
+-- Exportiere Struktur von Tabelle ValeaRP-A.characters_phone_contacts
 CREATE TABLE IF NOT EXISTS `characters_phone_contacts` (
   `contactId` int(11) NOT NULL AUTO_INCREMENT,
   `phoneNumber` int(11) NOT NULL,
@@ -231,9 +231,9 @@ CREATE TABLE IF NOT EXISTS `characters_phone_contacts` (
   PRIMARY KEY (`contactId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.characters_phone_contacts: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.characters_phone_contacts: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.characters_skin
+-- Exportiere Struktur von Tabelle ValeaRP-A.characters_skin
 CREATE TABLE IF NOT EXISTS `characters_skin` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `charId` int(11) NOT NULL,
@@ -260,9 +260,9 @@ CREATE TABLE IF NOT EXISTS `characters_skin` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.characters_skin: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.characters_skin: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.characters_tablet_apps
+-- Exportiere Struktur von Tabelle ValeaRP-A.characters_tablet_apps
 CREATE TABLE IF NOT EXISTS `characters_tablet_apps` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `charId` int(11) NOT NULL,
@@ -278,9 +278,9 @@ CREATE TABLE IF NOT EXISTS `characters_tablet_apps` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.characters_tablet_apps: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.characters_tablet_apps: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.characters_tablet_tutorial
+-- Exportiere Struktur von Tabelle ValeaRP-A.characters_tablet_tutorial
 CREATE TABLE IF NOT EXISTS `characters_tablet_tutorial` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `charId` int(11) NOT NULL,
@@ -293,9 +293,9 @@ CREATE TABLE IF NOT EXISTS `characters_tablet_tutorial` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.characters_tablet_tutorial: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.characters_tablet_tutorial: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.characters_tattoos
+-- Exportiere Struktur von Tabelle ValeaRP-A.characters_tattoos
 CREATE TABLE IF NOT EXISTS `characters_tattoos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `charId` int(11) NOT NULL,
@@ -303,9 +303,9 @@ CREATE TABLE IF NOT EXISTS `characters_tattoos` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.characters_tattoos: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.characters_tattoos: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.characters_wanteds
+-- Exportiere Struktur von Tabelle ValeaRP-A.characters_wanteds
 CREATE TABLE IF NOT EXISTS `characters_wanteds` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `charId` int(11) NOT NULL,
@@ -314,9 +314,9 @@ CREATE TABLE IF NOT EXISTS `characters_wanteds` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.characters_wanteds: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.characters_wanteds: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.logs_company
+-- Exportiere Struktur von Tabelle ValeaRP-A.logs_company
 CREATE TABLE IF NOT EXISTS `logs_company` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `companyId` int(11) NOT NULL,
@@ -328,9 +328,9 @@ CREATE TABLE IF NOT EXISTS `logs_company` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.logs_company: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.logs_company: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.logs_faction
+-- Exportiere Struktur von Tabelle ValeaRP-A.logs_faction
 CREATE TABLE IF NOT EXISTS `logs_faction` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `factionId` int(11) NOT NULL,
@@ -342,9 +342,9 @@ CREATE TABLE IF NOT EXISTS `logs_faction` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.logs_faction: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.logs_faction: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.logs_login
+-- Exportiere Struktur von Tabelle ValeaRP-A.logs_login
 CREATE TABLE IF NOT EXISTS `logs_login` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(64) NOT NULL,
@@ -357,9 +357,9 @@ CREATE TABLE IF NOT EXISTS `logs_login` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.logs_login: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.logs_login: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_all_vehicles
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_all_vehicles
 CREATE TABLE IF NOT EXISTS `server_all_vehicles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category` varchar(64) NOT NULL,
@@ -376,7 +376,7 @@ CREATE TABLE IF NOT EXISTS `server_all_vehicles` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=426 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_all_vehicles: ~425 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_all_vehicles: ~425 rows (ungefähr)
 INSERT INTO `server_all_vehicles` (`id`, `category`, `manufactor`, `name`, `hash`, `price`, `trunkcapacity`, `maxfuel`, `fueltype`, `seats`, `tax`, `vehClass`) VALUES
 	(1, 'COMPACT', 'Declasse', 'Asbo', 1118611807, -1, 20, 60, 'Benzin', 2, 10, 0),
 	(2, 'COMPACT', 'Declasse', 'Blista', 3950024287, -1, 20, 60, 'Benzin', 2, 10, 0),
@@ -804,7 +804,7 @@ INSERT INTO `server_all_vehicles` (`id`, `category`, `manufactor`, `name`, `hash
 	(424, 'The Contract', 'Declasse', 'youga4 ', 1486521356, -1, 110, 70, 'Benzin', 4, 10, 0),
 	(425, 'The Contract', 'Declasse', 'zeno ', 655665811, -1, 40, 70, 'Benzin', 2, 10, 0);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_animations
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_animations
 CREATE TABLE IF NOT EXISTS `server_animations` (
   `animId` int(11) NOT NULL AUTO_INCREMENT,
   `displayName` varchar(64) NOT NULL,
@@ -815,7 +815,7 @@ CREATE TABLE IF NOT EXISTS `server_animations` (
   PRIMARY KEY (`animId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=302 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_animations: ~301 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_animations: ~301 rows (ungefähr)
 INSERT INTO `server_animations` (`animId`, `displayName`, `animDict`, `animName`, `animFlag`, `duration`) VALUES
 	(1, 'Tanzen 1', 'anim@amb@nightclub@dancers@solomun_entourage@', 'mi_dance_facedj_17_v1_female^1', 1, -1),
 	(2, 'Tanzen 2', 'anim@amb@nightclub@mini@dance@dance_solo@female@var_a@', 'high_center', 1, -1),
@@ -1119,7 +1119,7 @@ INSERT INTO `server_animations` (`animId`, `displayName`, `animDict`, `animName`
 	(300, 'Erklären', 'special_ped@jane@monologue_5@monologue_5c', 'brotheradrianhasshown_2', 1, -1),
 	(301, 'Hände hoch', 'missminuteman_1ig_2', 'handsup_base', 1, -1);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_atm
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_atm
 CREATE TABLE IF NOT EXISTS `server_atm` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `posX` float NOT NULL,
@@ -1129,7 +1129,7 @@ CREATE TABLE IF NOT EXISTS `server_atm` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=135 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_atm: ~134 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_atm: ~134 rows (ungefähr)
 INSERT INTO `server_atm` (`id`, `posX`, `posY`, `posZ`, `zoneName`) VALUES
 	(1, -56.9934, -1752.22, 29.4147, 'Bankautomat'),
 	(2, 33.1121, -1348.22, 29.4821, 'Bankautomat'),
@@ -1266,7 +1266,7 @@ INSERT INTO `server_atm` (`id`, `posX`, `posY`, `posZ`, `zoneName`) VALUES
 	(133, -2294.58, 356.4, 174.593, 'Bankautomat'),
 	(134, -2293.85, 354.712, 174.593, 'Bankautomat');
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_automaten
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_automaten
 CREATE TABLE IF NOT EXISTS `server_automaten` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `automatenId` int(11) NOT NULL,
@@ -1276,13 +1276,13 @@ CREATE TABLE IF NOT EXISTS `server_automaten` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_automaten: ~3 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_automaten: ~3 rows (ungefähr)
 INSERT INTO `server_automaten` (`id`, `automatenId`, `posX`, `posY`, `posZ`) VALUES
 	(1, 2, 436.101, -978.91, 30.6783),
 	(2, 4, 436.22, -986.73, 30.6783),
 	(3, 0, 435.903, -985.873, 30.6783);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_banks
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_banks
 CREATE TABLE IF NOT EXISTS `server_banks` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `posX` float NOT NULL,
@@ -1297,7 +1297,7 @@ CREATE TABLE IF NOT EXISTS `server_banks` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_banks: ~9 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_banks: ~9 rows (ungefähr)
 INSERT INTO `server_banks` (`id`, `posX`, `posY`, `posZ`, `pedX`, `pedY`, `pedZ`, `pedRot`, `pedModel`, `zoneName`) VALUES
 	(1, -1212.62, -330.789, 37.787, -1212, -331.965, 37.7722, 23.5792, 'a_m_y_business_02', 'Rockford Hills'),
 	(2, -350.941, -49.9481, 49.0426, -351.363, -51.244, 49.0278, -22.2913, 'a_m_y_business_02', 'Burton'),
@@ -1309,7 +1309,7 @@ INSERT INTO `server_banks` (`id`, `posX`, `posY`, `posZ`, `pedX`, `pedY`, `pedZ`
 	(8, 247.305, 222.738, 106.284, 248.585, 224.466, 106.284, 158.929, 'a_m_y_business_02', 'Maze Bank Fraktion'),
 	(9, 242.189, 224.743, 106.284, 242.374, 226.76, 106.284, 158.641, 'a_m_y_business_02', 'Maze Bank');
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_bank_paper
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_bank_paper
 CREATE TABLE IF NOT EXISTS `server_bank_paper` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `accountNumber` int(11) NOT NULL,
@@ -1323,9 +1323,9 @@ CREATE TABLE IF NOT EXISTS `server_bank_paper` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_bank_paper: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_bank_paper: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_barbers
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_barbers
 CREATE TABLE IF NOT EXISTS `server_barbers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `posX` float NOT NULL,
@@ -1339,7 +1339,7 @@ CREATE TABLE IF NOT EXISTS `server_barbers` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_barbers: ~7 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_barbers: ~7 rows (ungefähr)
 INSERT INTO `server_barbers` (`id`, `posX`, `posY`, `posZ`, `pedModel`, `pedX`, `pedY`, `pedZ`, `pedRot`) VALUES
 	(1, -35.3531, -154.968, 57.0765, 's_f_m_fembarber', -35.3531, -154.968, 56.0765, 295.28),
 	(2, 1215.08, -475.233, 66.2081, 'cs_guadalope', 1215.08, -475.233, 65.2081, 13.6481),
@@ -1349,7 +1349,7 @@ INSERT INTO `server_barbers` (`id`, `posX`, `posY`, `posZ`, `pedModel`, `pedX`, 
 	(6, -276.963, 6224.98, 31.6955, 'a_f_m_soucentmc_01', -276.963, 6224.98, 30.6955, 356.058),
 	(7, 1931.46, 3734.23, 32.8445, 'ig_tonya', 1931.46, 3734.23, 31.8445, 166.098);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_blips
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_blips
 CREATE TABLE IF NOT EXISTS `server_blips` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
@@ -1363,7 +1363,7 @@ CREATE TABLE IF NOT EXISTS `server_blips` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_blips: ~25 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_blips: ~25 rows (ungefähr)
 INSERT INTO `server_blips` (`id`, `name`, `color`, `scale`, `shortRange`, `sprite`, `posX`, `posY`, `posZ`) VALUES
 	(1, 'Department of Justice', 49, 0.5, 1, 162, -552.29, -192.409, 38.463),
 	(2, 'Los Santos Police Department', 29, 0.5, 1, 60, -567.442, -125.736, 38.4293),
@@ -1391,7 +1391,7 @@ INSERT INTO `server_blips` (`id`, `name`, `color`, `scale`, `shortRange`, `sprit
 	(28, 'Produzieren | Schutzweste', 47, 0.4, 1, 478, -52.0615, -397.727, 38.126),
 	(29, 'Lastwagenfahrer', 24, 0.4, 1, 477, 94.6681, -2675.85, 5.99341);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_calls
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_calls
 CREATE TABLE IF NOT EXISTS `server_calls` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `charId` int(11) NOT NULL,
@@ -1401,9 +1401,9 @@ CREATE TABLE IF NOT EXISTS `server_calls` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_calls: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_calls: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_clothes
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_clothes
 CREATE TABLE IF NOT EXISTS `server_clothes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `clothesName` varchar(128) COLLATE utf8mb3_bin NOT NULL,
@@ -1415,7 +1415,7 @@ CREATE TABLE IF NOT EXISTS `server_clothes` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=18417 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin ROW_FORMAT=DYNAMIC;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_clothes: ~12.258 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_clothes: ~12.258 rows (ungefähr)
 INSERT INTO `server_clothes` (`id`, `clothesName`, `type`, `draw`, `texture`, `gender`, `faction`) VALUES
 	(1, 'Marineblau, normal M', 'Leg', 0, 0, 0, 0),
 	(2, 'Abgetragen, schwarz, normal M', 'Leg', 0, 1, 0, 0),
@@ -13751,7 +13751,7 @@ INSERT INTO `server_clothes` (`id`, `clothesName`, `type`, `draw`, `texture`, `g
 	(18415, 'Gang Cap 3 M', 'Hat', 229, 3, 0, 0),
 	(18416, 'Gang Cap 4 M', 'Hat', 229, 4, 0, 0);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_clothesshops
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_clothesshops
 CREATE TABLE IF NOT EXISTS `server_clothesshops` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
@@ -13766,7 +13766,7 @@ CREATE TABLE IF NOT EXISTS `server_clothesshops` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_clothesshops: ~15 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_clothesshops: ~15 rows (ungefähr)
 INSERT INTO `server_clothesshops` (`id`, `name`, `posX`, `posY`, `posZ`, `pedX`, `pedY`, `pedZ`, `pedRot`, `pedModel`) VALUES
 	(1, 'Kleidungsladen', 75.3363, -1392.84, 29.3641, 73.9648, -1392.66, 28.3641, -92.0779, 'a_m_y_beachvesp_01'),
 	(2, 'Kleidungsladen', -709.53, -153.679, 37.4015, -708.29, -152.98, 36.4015, 117.693, 'a_m_y_beachvesp_01'),
@@ -13784,7 +13784,7 @@ INSERT INTO `server_clothesshops` (`id`, `name`, `posX`, `posY`, `posZ`, `pedX`,
 	(14, 'Kleidungsladen', -1101.3, 2710.62, 19.1025, -1102.29, 2711.68, 18.1025, -137.053, 'a_m_y_beachvesp_01'),
 	(15, 'Maskenladen', -1337.62, -1277.93, 4.8645, -1334.64, -1278.11, 3.94873, 88.1884, 'a_m_y_beachvesp_01');
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_clothesshops_items
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_clothesshops_items
 CREATE TABLE IF NOT EXISTS `server_clothesshops_items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `shopId` int(11) NOT NULL,
@@ -13793,7 +13793,7 @@ CREATE TABLE IF NOT EXISTS `server_clothesshops_items` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=142230 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin ROW_FORMAT=DYNAMIC;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_clothesshops_items: ~18.928 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_clothesshops_items: ~18.928 rows (ungefähr)
 INSERT INTO `server_clothesshops_items` (`id`, `shopId`, `clothesName`, `itemPrice`) VALUES
 	(123302, 1, 'Marineblau, normal M', 100),
 	(123303, 1, 'Schiefergraue Jeans M', 100),
@@ -32725,7 +32725,7 @@ INSERT INTO `server_clothesshops_items` (`id`, `shopId`, `clothesName`, `itemPri
 	(142228, 14, 'Teufelroboter 1', 100),
 	(142229, 14, 'Stoff Turnschuhe 1', 100);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_clothes_storages
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_clothes_storages
 CREATE TABLE IF NOT EXISTS `server_clothes_storages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `posX` float NOT NULL,
@@ -32735,9 +32735,9 @@ CREATE TABLE IF NOT EXISTS `server_clothes_storages` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_clothes_storages: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_clothes_storages: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_companys
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_companys
 CREATE TABLE IF NOT EXISTS `server_companys` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `companyName` varchar(64) NOT NULL,
@@ -32751,9 +32751,9 @@ CREATE TABLE IF NOT EXISTS `server_companys` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_companys: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_companys: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_company_members
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_company_members
 CREATE TABLE IF NOT EXISTS `server_company_members` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `companyId` int(11) NOT NULL,
@@ -32763,9 +32763,9 @@ CREATE TABLE IF NOT EXISTS `server_company_members` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_company_members: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_company_members: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_crafting_recipes
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_crafting_recipes
 CREATE TABLE IF NOT EXISTS `server_crafting_recipes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `craftingStations` varchar(255) NOT NULL,
@@ -32775,11 +32775,11 @@ CREATE TABLE IF NOT EXISTS `server_crafting_recipes` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_crafting_recipes: ~1 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_crafting_recipes: ~1 rows (ungefähr)
 INSERT INTO `server_crafting_recipes` (`id`, `craftingStations`, `neededItems`, `endItem`, `duration`) VALUES
 	(1, '[1]', '[{"itemName":"Schrott","itemAmount":20},{"itemName":"Plastik","itemAmount":5}]', '{"itemName":"Reparaturkit","itemAmount":1}', 2500);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_crafting_stations
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_crafting_stations
 CREATE TABLE IF NOT EXISTS `server_crafting_stations` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `pos` varchar(128) NOT NULL DEFAULT '{ "x": 0.0, "y": 0.0, "z": 0.0 }',
@@ -32790,11 +32790,11 @@ CREATE TABLE IF NOT EXISTS `server_crafting_stations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_crafting_stations: ~1 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_crafting_stations: ~1 rows (ungefähr)
 INSERT INTO `server_crafting_stations` (`id`, `pos`, `heading`, `pedModel`, `isBlipVisible`, `comment`) VALUES
 	(1, '{ "x": 300.3956, "y": -1237.2924, "z": 28.43 }', 163.991, 'a_m_m_og_boss_01', 0, 'test');
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_doors
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_doors
 CREATE TABLE IF NOT EXISTS `server_doors` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
@@ -32813,9 +32813,9 @@ CREATE TABLE IF NOT EXISTS `server_doors` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_doors: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_doors: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_factions
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_factions
 CREATE TABLE IF NOT EXISTS `server_factions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `factionName` varchar(128) NOT NULL,
@@ -32825,7 +32825,7 @@ CREATE TABLE IF NOT EXISTS `server_factions` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_factions: ~6 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_factions: ~6 rows (ungefähr)
 INSERT INTO `server_factions` (`id`, `factionName`, `factionShort`, `factionMoney`, `phoneNumber`) VALUES
 	(1, 'Department of Justice', 'DOJ', 120000, 910),
 	(2, 'Los Santos Police Department', 'LSPD', 120000, 911),
@@ -32834,7 +32834,7 @@ INSERT INTO `server_factions` (`id`, `factionName`, `factionShort`, `factionMone
 	(5, 'Department of Motorvehicles', 'DMV', 120000, 914),
 	(6, 'Vanilla Unicorn', 'VUC', 120000, 915);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_faction_clothes
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_faction_clothes
 CREATE TABLE IF NOT EXISTS `server_faction_clothes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `faction` int(11) NOT NULL,
@@ -32842,9 +32842,9 @@ CREATE TABLE IF NOT EXISTS `server_faction_clothes` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_faction_clothes: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_faction_clothes: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_faction_dispatches
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_faction_dispatches
 CREATE TABLE IF NOT EXISTS `server_faction_dispatches` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `factionId` int(11) NOT NULL,
@@ -32856,9 +32856,9 @@ CREATE TABLE IF NOT EXISTS `server_faction_dispatches` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_faction_dispatches: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_faction_dispatches: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_faction_members
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_faction_members
 CREATE TABLE IF NOT EXISTS `server_faction_members` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `charId` int(11) NOT NULL,
@@ -32872,9 +32872,9 @@ CREATE TABLE IF NOT EXISTS `server_faction_members` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_faction_members: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_faction_members: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_faction_positions
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_faction_positions
 CREATE TABLE IF NOT EXISTS `server_faction_positions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `factionId` int(11) NOT NULL,
@@ -32886,7 +32886,7 @@ CREATE TABLE IF NOT EXISTS `server_faction_positions` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_faction_positions: ~21 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_faction_positions: ~21 rows (ungefähr)
 INSERT INTO `server_faction_positions` (`id`, `factionId`, `posType`, `posX`, `posY`, `posZ`, `rotation`) VALUES
 	(1, 1, 'duty', -554.479, -184.919, 37.2102, -130.305),
 	(2, 1, 'servicephone', -558.079, -186.791, 38.0923, 0),
@@ -32910,7 +32910,7 @@ INSERT INTO `server_faction_positions` (`id`, `factionId`, `posType`, `posX`, `p
 	(20, 3, 'skin', 299.076, -598.958, 43, -10.4),
 	(21, 4, 'skin', -240.224, -1340.14, 29.8806, -89.6635);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_faction_ranks
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_faction_ranks
 CREATE TABLE IF NOT EXISTS `server_faction_ranks` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `factionId` int(11) NOT NULL,
@@ -32920,7 +32920,7 @@ CREATE TABLE IF NOT EXISTS `server_faction_ranks` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_faction_ranks: ~75 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_faction_ranks: ~75 rows (ungefähr)
 INSERT INTO `server_faction_ranks` (`id`, `factionId`, `rankId`, `name`, `paycheck`) VALUES
 	(1, 1, 1, 'Rang 1', 0),
 	(2, 1, 2, 'Rang 2', 0),
@@ -32998,7 +32998,7 @@ INSERT INTO `server_faction_ranks` (`id`, `factionId`, `rankId`, `name`, `payche
 	(74, 6, 11, 'Rang 11', 0),
 	(75, 6, 12, 'Rang 12', 0);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_faction_skins
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_faction_skins
 CREATE TABLE IF NOT EXISTS `server_faction_skins` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `faction` int(11) NOT NULL,
@@ -33023,9 +33023,9 @@ CREATE TABLE IF NOT EXISTS `server_faction_skins` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_faction_skins: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_faction_skins: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_faction_storage_items
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_faction_storage_items
 CREATE TABLE IF NOT EXISTS `server_faction_storage_items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `charId` int(11) NOT NULL,
@@ -33035,9 +33035,9 @@ CREATE TABLE IF NOT EXISTS `server_faction_storage_items` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_faction_storage_items: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_faction_storage_items: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_farming_producer
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_farming_producer
 CREATE TABLE IF NOT EXISTS `server_farming_producer` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `posX` float NOT NULL,
@@ -33056,7 +33056,7 @@ CREATE TABLE IF NOT EXISTS `server_farming_producer` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_farming_producer: ~13 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_farming_producer: ~13 rows (ungefähr)
 INSERT INTO `server_farming_producer` (`id`, `posX`, `posY`, `posZ`, `pedRotation`, `pedModel`, `neededItem`, `producedItem`, `range`, `duration`, `neededItemAmount`, `producedItemAmount`, `blipName`, `isBlipVisible`) VALUES
 	(1, -1123.53, 2682.65, 17.7488, -143, 's_m_y_factory_01', 'Orange', 'Orangensaft', 5, 2400, 10, 2, 'Orange', 0),
 	(2, -2521.15, 2310.34, 32.2058, -90, 's_m_y_factory_01', 'Trauben', 'Traubensaft', 5, 2400, 10, 2, 'Trauben', 0),
@@ -33072,7 +33072,7 @@ INSERT INTO `server_farming_producer` (`id`, `posX`, `posY`, `posZ`, `pedRotatio
 	(12, -2015.99, 559.266, 107.306, 74, 's_m_y_factory_01', 'Aramidstoff', 'Kevlar', 5, 2600, 50, 1, '', 0),
 	(13, -52.0615, -397.727, 37.126, 157, 's_m_y_factory_01', 'Kevlar', 'Schutzweste', 5, 3300, 2, 1, '', 0);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_farming_spots
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_farming_spots
 CREATE TABLE IF NOT EXISTS `server_farming_spots` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `posX` float NOT NULL,
@@ -33093,7 +33093,7 @@ CREATE TABLE IF NOT EXISTS `server_farming_spots` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_farming_spots: ~15 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_farming_spots: ~15 rows (ungefähr)
 INSERT INTO `server_farming_spots` (`id`, `posX`, `posY`, `posZ`, `itemName`, `animation`, `neededItemToFarm`, `itemMinAmount`, `itemMaxAmount`, `markerColorR`, `markerColorG`, `markerColorB`, `blipColor`, `range`, `duration`, `isBlipVisible`) VALUES
 	(1, -1842.13, 2013.57, 132.721, 'Orange', 'farmPickup', 'Korb', 1, 3, 120, 120, 120, 36, 13, 1100, 0),
 	(2, -1619.76, 2243.14, 80.082, 'Trauben', 'farmPickup', 'Korb', 1, 3, 120, 120, 120, 36, 13, 1100, 0),
@@ -33111,7 +33111,7 @@ INSERT INTO `server_farming_spots` (`id`, `posX`, `posY`, `posZ`, `itemName`, `a
 	(14, 2626.87, 2864.64, 41.4791, 'Sand', 'farmPickup', 'Schaufel', 1, 3, 120, 120, 120, 36, 13, 1100, 0),
 	(15, 565.015, 611.631, 132.603, 'Aramidfaser', 'farmPickup', 'Korb', 1, 3, 120, 120, 120, 36, 11, 1100, 0);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_fuel_spots
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_fuel_spots
 CREATE TABLE IF NOT EXISTS `server_fuel_spots` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `fuelStationId` int(11) NOT NULL,
@@ -33121,7 +33121,7 @@ CREATE TABLE IF NOT EXISTS `server_fuel_spots` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=118 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_fuel_spots: ~117 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_fuel_spots: ~117 rows (ungefähr)
 INSERT INTO `server_fuel_spots` (`id`, `fuelStationId`, `posX`, `posY`, `posZ`) VALUES
 	(1, 1, 254.004, -1268.25, 28.37),
 	(2, 1, 254.189, -1261.24, 28.37),
@@ -33241,7 +33241,7 @@ INSERT INTO `server_fuel_spots` (`id`, `fuelStationId`, `posX`, `posY`, `posZ`) 
 	(116, 16, 2574.37, 364.549, 108.642),
 	(117, 17, 1207.6, 2660.64, 37.8901);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_fuel_stations
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_fuel_stations
 CREATE TABLE IF NOT EXISTS `server_fuel_stations` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
@@ -33252,7 +33252,7 @@ CREATE TABLE IF NOT EXISTS `server_fuel_stations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_fuel_stations: ~17 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_fuel_stations: ~17 rows (ungefähr)
 INSERT INTO `server_fuel_stations` (`id`, `name`, `owner`, `availableFuel`, `availableLiters`, `bank`) VALUES
 	(1, 'Tankstelle', 0, '[{ "fueltype": "Benzin", "fuelPrice": 2}, { "fueltype": "Diesel", "fuelPrice": 2 }, { "fueltype": "Strom", "fuelPrice": 2 }]', 9000, 8934),
 	(2, 'Tankstelle', 0, '[{ "fueltype": "Benzin", "fuelPrice": 2}, { "fueltype": "Diesel", "fuelPrice": 2 }, { "fueltype": "Strom", "fuelPrice": 2 }]', 9000, 5467),
@@ -33272,7 +33272,7 @@ INSERT INTO `server_fuel_stations` (`id`, `name`, `owner`, `availableFuel`, `ava
 	(16, 'Tankstelle', 0, '[{ "fueltype": "Benzin", "fuelPrice": 2}, { "fueltype": "Diesel", "fuelPrice": 2 }, { "fueltype": "Strom", "fuelPrice": 2 }]', 9000, 501),
 	(17, 'Tankstelle', 0, '[{ "fueltype": "Benzin", "fuelPrice": 2}, { "fueltype": "Diesel", "fuelPrice": 2 }, { "fueltype": "Strom", "fuelPrice": 2 }]', 9000, 374);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_garages
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_garages
 CREATE TABLE IF NOT EXISTS `server_garages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
@@ -33285,7 +33285,7 @@ CREATE TABLE IF NOT EXISTS `server_garages` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_garages: ~30 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_garages: ~30 rows (ungefähr)
 INSERT INTO `server_garages` (`id`, `name`, `posX`, `posY`, `posZ`, `rotation`, `type`, `isBlipVisible`) VALUES
 	(1, 'Fraktion DOJ Auto', -537.415, -168.33, 37.1934, 57.1726, 0, 0),
 	(2, 'Fraktion DOJ Heligarage', -584.545, -145.081, 50.9766, 19.6532, 3, 0),
@@ -33318,7 +33318,7 @@ INSERT INTO `server_garages` (`id`, `name`, `posX`, `posY`, `posZ`, `rotation`, 
 	(29, 'Helikopter Abschlepphof', -1147.31, -2824.43, 13.3004, 151.368, 3, 1),
 	(30, 'Fahrzeug Abschlepphof', 408.949, -1622.74, 28.2799, -128.312, 0, 1);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_garage_slots
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_garage_slots
 CREATE TABLE IF NOT EXISTS `server_garage_slots` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `garageId` int(11) NOT NULL,
@@ -33332,7 +33332,7 @@ CREATE TABLE IF NOT EXISTS `server_garage_slots` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_garage_slots: ~52 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_garage_slots: ~52 rows (ungefähr)
 INSERT INTO `server_garage_slots` (`id`, `garageId`, `parkid`, `posX`, `posY`, `posZ`, `rotX`, `rotY`, `rotZ`) VALUES
 	(1, 1, 1, -549.943, -159.086, 37.5363, 0, 0, -1.1379),
 	(2, 2, 1, -578.387, -136.391, 52.145, 0, 0, -2.67159),
@@ -33387,7 +33387,7 @@ INSERT INTO `server_garage_slots` (`id`, `garageId`, `parkid`, `posX`, `posY`, `
 	(61, 29, 1, -1178.43, -2845.82, 14.2667, 0, 0, -0.296843),
 	(62, 30, 1, 401.895, -1634.02, 29.2799, 0, 0, 2.91896);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_hotels
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_hotels
 CREATE TABLE IF NOT EXISTS `server_hotels` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
@@ -33397,7 +33397,7 @@ CREATE TABLE IF NOT EXISTS `server_hotels` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_hotels: ~7 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_hotels: ~7 rows (ungefähr)
 INSERT INTO `server_hotels` (`id`, `name`, `posX`, `posY`, `posZ`) VALUES
 	(1, 'Apartements', 5.52365, -986.016, 28.3574),
 	(2, 'Apartements', 287.499, -919.806, 29.263),
@@ -33407,7 +33407,7 @@ INSERT INTO `server_hotels` (`id`, `name`, `posX`, `posY`, `posZ`) VALUES
 	(6, 'Apartements', -150.804, 6431.29, 31.908),
 	(7, 'Apartements', 1140.85, 2663.72, 38.159);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_hotels_apartments
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_hotels_apartments
 CREATE TABLE IF NOT EXISTS `server_hotels_apartments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `hotelId` int(11) NOT NULL,
@@ -33419,7 +33419,7 @@ CREATE TABLE IF NOT EXISTS `server_hotels_apartments` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_hotels_apartments: ~68 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_hotels_apartments: ~68 rows (ungefähr)
 INSERT INTO `server_hotels_apartments` (`id`, `hotelId`, `interiorId`, `ownerId`, `rentPrice`, `maxRentHours`, `lastRent`) VALUES
 	(1, 1, 1, 0, 80, 24, '2022-01-02 22:43:52'),
 	(2, 1, 1, 0, 80, 24, '2020-08-28 19:39:13'),
@@ -33490,7 +33490,7 @@ INSERT INTO `server_hotels_apartments` (`id`, `hotelId`, `interiorId`, `ownerId`
 	(67, 7, 1, 0, 80, 24, '2020-11-21 04:33:08'),
 	(68, 7, 1, 0, 80, 24, '2020-11-21 04:33:08');
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_hotels_storage
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_hotels_storage
 CREATE TABLE IF NOT EXISTS `server_hotels_storage` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `apartmentId` int(11) NOT NULL,
@@ -33499,9 +33499,9 @@ CREATE TABLE IF NOT EXISTS `server_hotels_storage` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_hotels_storage: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_hotels_storage: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_houses
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_houses
 CREATE TABLE IF NOT EXISTS `server_houses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `interiorId` int(11) NOT NULL,
@@ -33525,7 +33525,7 @@ CREATE TABLE IF NOT EXISTS `server_houses` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1098 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_houses: ~998 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_houses: ~998 rows (ungefähr)
 INSERT INTO `server_houses` (`id`, `interiorId`, `ownerId`, `street`, `price`, `maxRenters`, `rentPrice`, `isRentable`, `hasStorage`, `hasAlarm`, `hasBank`, `entranceX`, `entranceY`, `entranceZ`, `money`, `garageSlots`, `garagePos`, `garageVehPos`, `garageVehRot`) VALUES
 	(100, 1, 0, 'Grove Street 1', 40000, 4, 0, 0, 0, 0, 0, -50.4264, -1783.4, 28.2858, 0, 0, '{ "x":  0.0, "y":  0.0, "z": 0.0 }', '{ "x":  0.0, "y":  0.0, "z": 0.0 }', '{ "x":  0.0, "y":  0.0, "z": 0.0 }'),
 	(101, 1, 0, 'Grove Street 2', 40000, 4, 0, 0, 0, 0, 0, -42.1582, -1792.3, 27.814, 0, 0, '{ "x":  0.0, "y":  0.0, "z": 0.0 }', '{ "x":  0.0, "y":  0.0, "z": 0.0 }', '{ "x":  0.0, "y":  0.0, "z": 0.0 }'),
@@ -34526,7 +34526,7 @@ INSERT INTO `server_houses` (`id`, `interiorId`, `ownerId`, `street`, `price`, `
 	(1096, 9, 0, 'Route 68 17', 35000, 4, 0, 0, 0, 0, 0, 1258.55, 2739.88, 38.8, 0, 0, '{ "x":  0.0, "y":  0.0, "z": 0.0 }', '{ "x":  0.0, "y":  0.0, "z": 0.0 }', '{ "x":  0.0, "y":  0.0, "z": 0.0 }'),
 	(1097, 9, 0, 'GrapeseedMain Street 1', 35000, 4, 0, 0, 0, 0, 0, 2159.04, 4782.3, 41.9509, 0, 0, '{ "x":  0.0, "y":  0.0, "z": 0.0 }', '{ "x":  0.0, "y":  0.0, "z": 0.0 }', '{ "x":  0.0, "y":  0.0, "z": 0.0 }');
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_houses_interior
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_houses_interior
 CREATE TABLE IF NOT EXISTS `server_houses_interior` (
   `interiorId` int(11) NOT NULL AUTO_INCREMENT,
   `exitX` float NOT NULL,
@@ -34542,7 +34542,7 @@ CREATE TABLE IF NOT EXISTS `server_houses_interior` (
   PRIMARY KEY (`interiorId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_houses_interior: ~10 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_houses_interior: ~10 rows (ungefähr)
 INSERT INTO `server_houses_interior` (`interiorId`, `exitX`, `exitY`, `exitZ`, `storageX`, `storageY`, `storageZ`, `storageLimit`, `manageX`, `manageY`, `manageZ`) VALUES
 	(1, 266.196, -1007.35, -102.009, 265.973, -999.452, -99.0086, 5, 265.055, -996, -100),
 	(2, -1150.38, -1521.18, 9.52707, -1144.18, -1515.94, 10.6271, 8, -1155.56, -1523.72, 9.52707),
@@ -34555,7 +34555,7 @@ INSERT INTO `server_houses_interior` (`interiorId`, `exitX`, `exitY`, `exitZ`, `
 	(9, 1972.65, 3816.75, 32.4249, 1978.11, 3819.43, 33.4418, 5, 1970.03, 3815.41, 32.4249),
 	(10, -815.288, 178.8, 71.1458, -806.321, 171.363, 72.8367, 20, -812.321, 182.492, 75.7289);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_houses_renter
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_houses_renter
 CREATE TABLE IF NOT EXISTS `server_houses_renter` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `charId` int(11) NOT NULL,
@@ -34563,12 +34563,12 @@ CREATE TABLE IF NOT EXISTS `server_houses_renter` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_houses_renter: ~2 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_houses_renter: ~2 rows (ungefähr)
 INSERT INTO `server_houses_renter` (`id`, `charId`, `houseId`) VALUES
 	(1, 2, 720),
 	(2, 16, 720);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_houses_storage
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_houses_storage
 CREATE TABLE IF NOT EXISTS `server_houses_storage` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `houseId` int(11) NOT NULL,
@@ -34577,9 +34577,9 @@ CREATE TABLE IF NOT EXISTS `server_houses_storage` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_houses_storage: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_houses_storage: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_items
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_items
 CREATE TABLE IF NOT EXISTS `server_items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `itemName` varchar(64) NOT NULL,
@@ -34607,7 +34607,7 @@ CREATE TABLE IF NOT EXISTS `server_items` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=231 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_items: ~230 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_items: ~230 rows (ungefähr)
 INSERT INTO `server_items` (`id`, `itemName`, `itemType`, `itemDescription`, `itemWeight`, `isItemDesire`, `itemDesireFood`, `itemDesireDrink`, `hasItemAnimation`, `itemAnimationName`, `isItemDroppable`, `isItemUseable`, `isItemGiveable`, `isItemClothes`, `ClothesType`, `ClothesDraw`, `ClothesTexture`, `ClothesUndershirt`, `ClothesUndershirtTexture`, `ClothesDecals`, `ClothesDecalsTexture`, `itemPicSRC`, `attachmentId`) VALUES
 	(1, 'Gefechtspistole', 'weapon', 'LSPD', 0, 0, 0, 0, 0, 'None', 1, 1, 1, 0, 'None', 0, 0, 0, 0, 0, 0, 'Combat-pistol.png', 0),
 	(2, 'Gefechtspistole Magazin', 'weapon', 'LSPD', 0, 0, 0, 0, 0, 'None', 1, 1, 1, 0, 'None', 0, 0, 0, 0, 0, 0, 'Magazin.png', 0),
@@ -34840,7 +34840,7 @@ INSERT INTO `server_items` (`id`, `itemName`, `itemType`, `itemDescription`, `it
 	(229, 'Kaufvertrag', 'items', 'Kaufvertrag', 0, 0, 0, 0, 0, 'None', 1, 0, 1, 0, 'None', 0, 0, 0, 0, 0, 0, 'Kaufvertrag.png', 0),
 	(230, 'EHK', 'items', 'EHK', 0.2, 0, 0, 0, 0, 'None', 1, 0, 1, 0, 'None', 0, 0, 0, 0, 0, 0, 'first-aid-kit.png', 0);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_jobs
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_jobs
 CREATE TABLE IF NOT EXISTS `server_jobs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `jobName` varchar(64) NOT NULL,
@@ -34850,7 +34850,7 @@ CREATE TABLE IF NOT EXISTS `server_jobs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_jobs: ~9 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_jobs: ~9 rows (ungefähr)
 INSERT INTO `server_jobs` (`id`, `jobName`, `jobPaycheck`, `jobNeededHours`, `jobPic`) VALUES
 	(1, 'Webentwickler', 1000, 2, 'code.png'),
 	(2, 'Reiseberater', 1000, 2, 'globe2.png'),
@@ -34862,7 +34862,7 @@ INSERT INTO `server_jobs` (`id`, `jobName`, `jobPaycheck`, `jobNeededHours`, `jo
 	(8, 'Autor', 2300, 4, 'editor.png'),
 	(9, 'Kundenberater', 3455, 6, 'headset.png');
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_licenses
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_licenses
 CREATE TABLE IF NOT EXISTS `server_licenses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `licCut` varchar(64) NOT NULL,
@@ -34871,7 +34871,7 @@ CREATE TABLE IF NOT EXISTS `server_licenses` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_licenses: ~8 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_licenses: ~8 rows (ungefähr)
 INSERT INTO `server_licenses` (`id`, `licCut`, `licName`, `licPrice`) VALUES
 	(1, 'pkw', 'PKW', 954),
 	(2, 'lkw', 'LKW', 1263),
@@ -34882,7 +34882,7 @@ INSERT INTO `server_licenses` (`id`, `licCut`, `licName`, `licPrice`) VALUES
 	(7, 'passengertransport', 'PassengerTransport', 570),
 	(8, 'weaponlicense', 'weaponlicense', 363);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_lifeinvader
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_lifeinvader
 CREATE TABLE IF NOT EXISTS `server_lifeinvader` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(64) NOT NULL,
@@ -34892,9 +34892,9 @@ CREATE TABLE IF NOT EXISTS `server_lifeinvader` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_lifeinvader: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_lifeinvader: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_markers
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_markers
 CREATE TABLE IF NOT EXISTS `server_markers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` int(11) NOT NULL DEFAULT 1,
@@ -34913,11 +34913,11 @@ CREATE TABLE IF NOT EXISTS `server_markers` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_markers: ~1 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_markers: ~1 rows (ungefähr)
 INSERT INTO `server_markers` (`id`, `type`, `posX`, `posY`, `posZ`, `scaleX`, `scaleY`, `scaleZ`, `red`, `green`, `blue`, `alpha`, `bobUpAndDown`, `kommentar`) VALUES
 	(1, 36, 345.349, -1553.34, 29.4711, 1, 1, 1, 242, 56, 46, 50, 1, 'Zulassungsstelle Fahrzeug');
 
--- Exportiere Struktur von Tabelle Sa-Market-A.Server_Minijob_Busdriver_Routes
+-- Exportiere Struktur von Tabelle ValeaRP-A.Server_Minijob_Busdriver_Routes
 CREATE TABLE IF NOT EXISTS `Server_Minijob_Busdriver_Routes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `routeId` int(11) NOT NULL,
@@ -34930,13 +34930,13 @@ CREATE TABLE IF NOT EXISTS `Server_Minijob_Busdriver_Routes` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.Server_Minijob_Busdriver_Routes: ~3 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.Server_Minijob_Busdriver_Routes: ~3 rows (ungefähr)
 INSERT INTO `Server_Minijob_Busdriver_Routes` (`id`, `routeId`, `routeName`, `hash`, `neededExp`, `givenExp`, `paycheck`, `neededTime`) VALUES
 	(1, 1, 'Linie 1 - Innenstadt', 3581397346, 0, 5, 200, '12 Minuten'),
 	(2, 2, 'Linie 2 - Innenstadt', 3581397346, 25, 10, 430, '15 Minuten'),
 	(3, 3, 'Linie 3 - Innenstadt', 3581397346, 100, 5, 633, '13 Minuten');
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_minijob_busdriver_spots
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_minijob_busdriver_spots
 CREATE TABLE IF NOT EXISTS `server_minijob_busdriver_spots` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `routeId` int(11) NOT NULL,
@@ -34947,7 +34947,7 @@ CREATE TABLE IF NOT EXISTS `server_minijob_busdriver_spots` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_minijob_busdriver_spots: ~47 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_minijob_busdriver_spots: ~47 rows (ungefähr)
 INSERT INTO `server_minijob_busdriver_spots` (`id`, `routeId`, `spotId`, `posX`, `posY`, `posZ`) VALUES
 	(1, 1, 1, 306.807, -765.519, 29.2055),
 	(2, 1, 2, 114.571, -784.056, 31.3008),
@@ -34997,7 +34997,7 @@ INSERT INTO `server_minijob_busdriver_spots` (`id`, `routeId`, `spotId`, `posX`,
 	(46, 3, 16, 932.264, -1752.06, 31.0396),
 	(47, 3, 17, 807.181, -1352.87, 26.2612);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_minijob_garbage_spots
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_minijob_garbage_spots
 CREATE TABLE IF NOT EXISTS `server_minijob_garbage_spots` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `routeId` int(11) NOT NULL,
@@ -35008,7 +35008,7 @@ CREATE TABLE IF NOT EXISTS `server_minijob_garbage_spots` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=178 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_minijob_garbage_spots: ~177 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_minijob_garbage_spots: ~177 rows (ungefähr)
 INSERT INTO `server_minijob_garbage_spots` (`id`, `routeId`, `spotId`, `posX`, `posY`, `posZ`) VALUES
 	(1, 1, 1, -362.195, -1860.78, 20.5329),
 	(2, 1, 2, -361.679, -1864.89, 20.5281),
@@ -35188,7 +35188,7 @@ INSERT INTO `server_minijob_garbage_spots` (`id`, `routeId`, `spotId`, `posX`, `
 	(176, 8, 20, -517.972, -870.407, 29.1367),
 	(177, 8, 21, -518.026, -868.114, 29.3268);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_minijob_lkw_routes
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_minijob_lkw_routes
 CREATE TABLE IF NOT EXISTS `server_minijob_lkw_routes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `routeId` int(11) NOT NULL,
@@ -35202,13 +35202,13 @@ CREATE TABLE IF NOT EXISTS `server_minijob_lkw_routes` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_minijob_lkw_routes: ~3 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_minijob_lkw_routes: ~3 rows (ungefähr)
 INSERT INTO `server_minijob_lkw_routes` (`id`, `routeId`, `routeName`, `hash`, `hash2`, `neededExp`, `givenExp`, `paycheck`, `neededTime`) VALUES
 	(1, 1, 'Innenstadt', 1518533038, 2154757102, 0, 5, 200, '12 Minuten'),
 	(2, 2, 'Sandy Shores', 177270108, 2236089197, 25, 10, 450, '15 Minuten'),
 	(3, 3, 'Paleto Bay', 177270108, 1502869817, 150, 15, 650, '20 Minuten');
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_minijob_lkw_spots
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_minijob_lkw_spots
 CREATE TABLE IF NOT EXISTS `server_minijob_lkw_spots` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `routeId` int(11) NOT NULL,
@@ -35219,7 +35219,7 @@ CREATE TABLE IF NOT EXISTS `server_minijob_lkw_spots` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_minijob_lkw_spots: ~40 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_minijob_lkw_spots: ~40 rows (ungefähr)
 INSERT INTO `server_minijob_lkw_spots` (`id`, `routeId`, `spotId`, `posX`, `posY`, `posZ`) VALUES
 	(1, 1, 1, -149.064, -2520.59, 5.99341),
 	(2, 1, 2, 1017.43, -2515.37, 28.3026),
@@ -35262,7 +35262,7 @@ INSERT INTO `server_minijob_lkw_spots` (`id`, `routeId`, `spotId`, `posX`, `posY
 	(39, 3, 17, 1357.94, -2095.6, 51.9934),
 	(40, 3, 18, 1101.24, -2237.67, 30.2234);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_nanojobs
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_nanojobs
 CREATE TABLE IF NOT EXISTS `server_nanojobs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `posX` float NOT NULL,
@@ -35272,7 +35272,7 @@ CREATE TABLE IF NOT EXISTS `server_nanojobs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_nanojobs: ~15 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_nanojobs: ~15 rows (ungefähr)
 INSERT INTO `server_nanojobs` (`id`, `posX`, `posY`, `posZ`, `jobName`) VALUES
 	(1, -1802.61, -1242.26, 8.6051, 'Angel'),
 	(2, -1804.1, -1244.03, 8.6051, 'Angel'),
@@ -35290,7 +35290,7 @@ INSERT INTO `server_nanojobs` (`id`, `posX`, `posY`, `posZ`, `jobName`) VALUES
 	(14, -1822.95, -1266.54, 8.6051, 'Angel'),
 	(15, -1824.5, -1268.31, 8.6051, 'Angel');
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_peds
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_peds
 CREATE TABLE IF NOT EXISTS `server_peds` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `model` varchar(64) NOT NULL,
@@ -35302,7 +35302,7 @@ CREATE TABLE IF NOT EXISTS `server_peds` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_peds: ~8 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_peds: ~8 rows (ungefähr)
 INSERT INTO `server_peds` (`id`, `model`, `posX`, `posY`, `posZ`, `rotation`, `kommentar`) VALUES
 	(1, 'csb_tonyprince', -577.609, -218.73, 37.1597, 27.5451, 'Personalausweis'),
 	(2, 'csb_tonyprince', -571.807, -200.98, 37.1597, 33.0128, 'Jobcenter'),
@@ -35313,7 +35313,7 @@ INSERT INTO `server_peds` (`id`, `model`, `posX`, `posY`, `posZ`, `rotation`, `k
 	(7, 's_m_y_cop_01', -550.774, -118.378, 32.745, 93.153, 'Aservatenkammer'),
 	(8, 'a_f_y_business_01', 337.108, -1562.93, 29.2909, -40.303, 'Zulassungsstelle');
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_shops
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_shops
 CREATE TABLE IF NOT EXISTS `server_shops` (
   `shopid` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
@@ -35333,7 +35333,7 @@ CREATE TABLE IF NOT EXISTS `server_shops` (
   PRIMARY KEY (`shopid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_shops: ~39 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_shops: ~39 rows (ungefähr)
 INSERT INTO `server_shops` (`shopid`, `name`, `posX`, `posY`, `posZ`, `pedX`, `pedY`, `pedZ`, `pedRot`, `pedModel`, `neededLicense`, `isOnlySelling`, `isBlipVisible`, `faction`, `robPos`) VALUES
 	(1, 'Justiz', -587.974, -203.499, 42.8271, -587.974, -203.499, 41.8271, -149.553, 'mp_f_boatstaff_01', 'None', 0, 0, 1, '{"X": 0.0, "Y": 0.0, "Z": 0.0}'),
 	(2, 'LSPD', -549.086, -118.378, 37.8564, -547.714, -117.481, 36.8564, 110.754, 's_m_y_cop_01', 'None', 0, 0, 2, '{"X": 0.0, "Y": 0.0, "Z": 0.0}'),
@@ -35375,7 +35375,7 @@ INSERT INTO `server_shops` (`shopid`, `name`, `posX`, `posY`, `posZ`, `pedX`, `p
 	(42, 'Verkaufer', 809.719, -490.656, 29.62, 809.719, -490.656, 30.62, 0, 'g_m_y_famca_01', 'None', 1, 0, 0, '{"X": 0.0, "Y": 0.0, "Z": 0.0}'),
 	(43, 'Spirituosenladen', -560.308, 286.048, 82.1714, -561.824, 286.207, 81.1714, -95.1506, 'mp_m_shopkeep_01', 'None', 0, 0, 0, '{"X": 0.0, "Y": 0.0, "Z": 0.0}');
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_shop_items
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_shop_items
 CREATE TABLE IF NOT EXISTS `server_shop_items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `shopid` int(11) NOT NULL,
@@ -35386,7 +35386,7 @@ CREATE TABLE IF NOT EXISTS `server_shop_items` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=781 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_shop_items: ~780 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_shop_items: ~780 rows (ungefähr)
 INSERT INTO `server_shop_items` (`id`, `shopid`, `itemName`, `itemAmount`, `itemPrice`, `itemGender`) VALUES
 	(1, 1, 'Schutzweste', 3, 250, 0),
 	(2, 1, 'Schlagstock', 1, 58, 0),
@@ -36169,7 +36169,7 @@ INSERT INTO `server_shop_items` (`id`, `shopid`, `itemName`, `itemAmount`, `item
 	(779, 43, 'Whiskey', 3, 18, 0),
 	(780, 43, 'Weinflasche', 3, 18, 0);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_tablet_apps
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_tablet_apps
 CREATE TABLE IF NOT EXISTS `server_tablet_apps` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `appName` varchar(64) NOT NULL,
@@ -36177,7 +36177,7 @@ CREATE TABLE IF NOT EXISTS `server_tablet_apps` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_tablet_apps: ~9 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_tablet_apps: ~9 rows (ungefähr)
 INSERT INTO `server_tablet_apps` (`id`, `appName`, `appPrice`) VALUES
 	(1, 'weather', 10),
 	(2, 'news', 10),
@@ -36189,7 +36189,7 @@ INSERT INTO `server_tablet_apps` (`id`, `appName`, `appPrice`) VALUES
 	(8, 'buyapp', 10),
 	(9, 'notices', 10);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_tablet_events
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_tablet_events
 CREATE TABLE IF NOT EXISTS `server_tablet_events` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `charId` int(11) NOT NULL,
@@ -36205,9 +36205,9 @@ CREATE TABLE IF NOT EXISTS `server_tablet_events` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_tablet_events: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_tablet_events: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_tablet_notes
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_tablet_notes
 CREATE TABLE IF NOT EXISTS `server_tablet_notes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `charId` int(11) NOT NULL,
@@ -36218,12 +36218,12 @@ CREATE TABLE IF NOT EXISTS `server_tablet_notes` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_tablet_notes: ~2 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_tablet_notes: ~2 rows (ungefähr)
 INSERT INTO `server_tablet_notes` (`id`, `charId`, `color`, `title`, `text`, `created`) VALUES
 	(1, 6, 'weiß', 'PIN', '973', '2022-02-23 12:24:53'),
 	(3, 16, 'gelb', 'Bank', '4248', '2022-02-24 18:10:32');
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_tattoos
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_tattoos
 CREATE TABLE IF NOT EXISTS `server_tattoos` (
   `id` int(11) NOT NULL,
   `collection` varchar(64) NOT NULL,
@@ -36235,7 +36235,7 @@ CREATE TABLE IF NOT EXISTS `server_tattoos` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_tattoos: ~919 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_tattoos: ~919 rows (ungefähr)
 INSERT INTO `server_tattoos` (`id`, `collection`, `nameHash`, `name`, `part`, `price`, `gender`) VALUES
 	(1, 'mpairraces_overlays', 'MP_Airraces_Tattoo_000_M', 'Turbulence', 'Torso', 1320, 0),
 	(2, 'mpairraces_overlays', 'MP_Airraces_Tattoo_001_M', 'Pilot Skull', 'Torso', 1810, 0),
@@ -37157,7 +37157,7 @@ INSERT INTO `server_tattoos` (`id`, `collection`, `nameHash`, `name`, `part`, `p
 	(918, 'multiplayer_overlays', 'FM_Tat_F_045', 'NULL', 'Torso', 1000, 1),
 	(919, 'multiplayer_overlays', 'FM_Tat_F_047', 'NULL', 'rightArm', 250, 1);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_tattooshops
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_tattooshops
 CREATE TABLE IF NOT EXISTS `server_tattooshops` (
   `id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
@@ -37172,7 +37172,7 @@ CREATE TABLE IF NOT EXISTS `server_tattooshops` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_tattooshops: ~6 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_tattooshops: ~6 rows (ungefähr)
 INSERT INTO `server_tattooshops` (`id`, `name`, `owner`, `bank`, `price`, `pedX`, `pedY`, `pedZ`, `pedModel`, `pedRot`) VALUES
 	(1, 'Tattooshop', 999999999, 26364, 55000, 319.74, 181.38, 102.57, 'u_m_y_tattoo_01', -111.764),
 	(2, 'Tattooshop', 999999999, 32499, 55000, -1152.05, -1423.98, 3.94873, 'u_m_y_tattoo_01', 114.549),
@@ -37181,7 +37181,7 @@ INSERT INTO `server_tattooshops` (`id`, `name`, `owner`, `bank`, `price`, `pedX`
 	(5, 'Tattooshop', 999999999, 1275, 55000, -291.969, 6199.82, 30.4703, 'u_m_y_tattoo_01', -131.998),
 	(6, 'Tattooshop', 999999999, 0, 55000, -3170.78, 1073.14, 19.8213, 'u_m_y_tattoo_01', -26.2826);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_teleports
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_teleports
 CREATE TABLE IF NOT EXISTS `server_teleports` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
@@ -37195,7 +37195,7 @@ CREATE TABLE IF NOT EXISTS `server_teleports` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_teleports: ~8 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_teleports: ~8 rows (ungefähr)
 INSERT INTO `server_teleports` (`id`, `name`, `posX`, `posY`, `posZ`, `targetX`, `targetY`, `targetZ`, `dimension`) VALUES
 	(4, 'PillboxHill Krankenhaus-Dach', 331.899, -595.648, 43.2821, 338.624, -583.78, 74.15, 0),
 	(5, 'PillboxHill Dach-Krankenhaus', 338.624, -583.78, 74.15, 331.899, -595.648, 43.2821, 0),
@@ -37206,7 +37206,7 @@ INSERT INTO `server_teleports` (`id`, `name`, `posX`, `posY`, `posZ`, `targetX`,
 	(10, 'PillboxHill Krankenhaus-Aufzug', 327.31, -603.336, 43.2821, 355.801, -596.281, 28.7744, 0),
 	(11, 'PillboxHill Krankenhaus-Aufzug', 355.801, -596.281, 28.7744, 327.31, -603.336, 43.2821, 0);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_vehicles
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_vehicles
 CREATE TABLE IF NOT EXISTS `server_vehicles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `charid` int(11) NOT NULL,
@@ -37233,7 +37233,7 @@ CREATE TABLE IF NOT EXISTS `server_vehicles` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_vehicles: ~5 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_vehicles: ~5 rows (ungefähr)
 INSERT INTO `server_vehicles` (`id`, `charid`, `hash`, `vehType`, `faction`, `fuel`, `km`, `enginestate`, `isEngineHealthy`, `lockstate`, `isingarage`, `garageid`, `isInHouseGarage`, `posX`, `posY`, `posZ`, `rotX`, `rotY`, `rotZ`, `plate`, `lastUsage`, `buyDate`) VALUES
 	(1, 1, 3981782132, 0, 0, 69.56, 3.54913, 0, 1, 1, 0, 11, 0, 215.855, -804, 30.2234, 0.00230073, 0.0204822, 1.15718, 'NL393772', '2022-09-20 16:43:02', '2022-09-20 16:43:02'),
 	(2, 1, 1323778901, 0, 0, 69.92, 0.0512171, 0, 1, 1, 0, 11, 0, -62.611, -1117.71, 25.7245, 0.000698176, -0.000683381, -3.12017, 'NL192076', '2022-09-20 17:06:02', '2022-09-20 17:06:02'),
@@ -37241,7 +37241,7 @@ INSERT INTO `server_vehicles` (`id`, `charid`, `hash`, `vehType`, `faction`, `fu
 	(5, 1, 917809321, 0, 0, 69.96, 0.0167216, 0, 1, 1, 0, 11, 0, -53.578, -1116.46, 25.9268, -0.000670236, -0.000710804, 0.0587323, 'NL153981', '2022-09-20 17:09:07', '2022-09-20 17:09:07'),
 	(6, 1, 1392481335, 0, 0, 69.96, 0.0131535, 0, 1, 1, 0, 11, 0, -56.5714, -1116.84, 25.7583, 0.00209499, -0.000619535, 0.0684102, 'NL962618', '2022-09-20 17:13:03', '2022-09-20 17:13:03');
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_vehicles_mod
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_vehicles_mod
 CREATE TABLE IF NOT EXISTS `server_vehicles_mod` (
   `id` int(11) NOT NULL,
   `vehId` int(11) NOT NULL,
@@ -37316,7 +37316,7 @@ CREATE TABLE IF NOT EXISTS `server_vehicles_mod` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_vehicles_mod: ~5 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_vehicles_mod: ~5 rows (ungefähr)
 INSERT INTO `server_vehicles_mod` (`id`, `vehId`, `colorPearl`, `headlightColor`, `spoiler`, `front_bumper`, `rear_bumper`, `side_skirt`, `exhaust`, `frame`, `grille`, `hood`, `fender`, `right_fender`, `roof`, `engine`, `brakes`, `transmission`, `horns`, `suspension`, `armor`, `turbo`, `xenon`, `wheel_type`, `wheels`, `wheelcolor`, `plate_holder`, `trim_design`, `ornaments`, `dial_design`, `steering_wheel`, `shift_lever`, `plaques`, `hydraulics`, `airfilter`, `window_tint`, `livery`, `plate`, `neon`, `neon_r`, `neon_g`, `neon_b`, `smoke_r`, `smoke_g`, `smoke_b`, `back_wheels`, `plate_vanity`, `door_interior`, `seats`, `rear_shelf`, `trunk`, `engine_block`, `strut_bar`, `arch_cover`, `antenna`, `exterior_parts`, `tank`, `rear_hydraulics`, `door`, `plate_color`, `colorPrimary_r`, `colorPrimary_g`, `colorPrimary_b`, `colorSecondary_r`, `colorSecondary_g`, `colorSecondary_b`, `colorPrimaryType`, `colorSecondaryType`, `interior_color`, `smoke`) VALUES
 	(1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0),
 	(2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 0, 0, 255, 0, 0, 0, 0, 0, 0),
@@ -37324,7 +37324,7 @@ INSERT INTO `server_vehicles_mod` (`id`, `vehId`, `colorPearl`, `headlightColor`
 	(5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 155, 2, 169, 155, 2, 169, 0, 0, 0, 0),
 	(6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 193, 4, 0, 193, 4, 0, 0, 0, 0);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_vehicle_items
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_vehicle_items
 CREATE TABLE IF NOT EXISTS `server_vehicle_items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `vehId` int(11) NOT NULL,
@@ -37334,9 +37334,9 @@ CREATE TABLE IF NOT EXISTS `server_vehicle_items` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_vehicle_items: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_vehicle_items: ~0 rows (ungefähr)
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_vehicle_shops
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_vehicle_shops
 CREATE TABLE IF NOT EXISTS `server_vehicle_shops` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
@@ -37354,7 +37354,7 @@ CREATE TABLE IF NOT EXISTS `server_vehicle_shops` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_vehicle_shops: ~15 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_vehicle_shops: ~15 rows (ungefähr)
 INSERT INTO `server_vehicle_shops` (`id`, `name`, `pedX`, `pedY`, `pedZ`, `pedRot`, `parkOutX`, `parkOutY`, `parkOutZ`, `parkOutRotX`, `parkOutRotY`, `parkOutRotZ`, `neededLicense`) VALUES
 	(1, 'Polizeifahrzeugshop', -576.079, -81.3626, 32.8967, -157.712, -579.152, -89.2484, 33.0542, 0, 0, -2.72106, 'pkw'),
 	(2, 'Polizeihelikoptershop', -547.134, -114.026, 50.9766, -157.134, -543.481, -123.455, 52.145, 0, 0, -2.37475, 'pkw'),
@@ -37372,7 +37372,7 @@ INSERT INTO `server_vehicle_shops` (`id`, `name`, `pedX`, `pedY`, `pedZ`, `pedRo
 	(17, 'Fahrzeugshop', 346.826, 3405.48, 35.9, 21.006, 345.574, 3412.68, 36.4579, 0, 0, 0.841056, 'pkw'),
 	(18, 'Fahrradladen', -1109.59, -1694.31, 3.56116, -53.8655, -1103.05, -1699.82, 4.27478, 0, 0, -1.1379, 'None');
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_vehicle_shops_items
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_vehicle_shops_items
 CREATE TABLE IF NOT EXISTS `server_vehicle_shops_items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `shopid` int(11) NOT NULL,
@@ -37388,7 +37388,7 @@ CREATE TABLE IF NOT EXISTS `server_vehicle_shops_items` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=258 DEFAULT CHARSET=utf8mb3;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_vehicle_shops_items: ~257 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_vehicle_shops_items: ~257 rows (ungefähr)
 INSERT INTO `server_vehicle_shops_items` (`id`, `shopid`, `hash`, `price`, `posX`, `posY`, `posZ`, `rotX`, `rotY`, `rotZ`, `isOnlyOnlineAvailable`) VALUES
 	(1, 1, 1127131465, 150, 0, 0, 0, 0, 0, 0, 0),
 	(2, 1, 2647026068, 150, 0, 0, 0, 0, 0, 0, 0),
@@ -37648,7 +37648,7 @@ INSERT INTO `server_vehicle_shops_items` (`id`, `shopid`, `hash`, `price`, `posX
 	(256, 18, 3061159916, 215, 0, 0, 0, 0, 0, 0, 0),
 	(257, 18, 3894672200, 230, 0, 0, 0, 0, 0, 0, 0);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_wanteds
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_wanteds
 CREATE TABLE IF NOT EXISTS `server_wanteds` (
   `wantedId` int(11) NOT NULL,
   `category` int(11) NOT NULL,
@@ -37659,7 +37659,7 @@ CREATE TABLE IF NOT EXISTS `server_wanteds` (
   PRIMARY KEY (`wantedId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_wanteds: ~69 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_wanteds: ~69 rows (ungefähr)
 INSERT INTO `server_wanteds` (`wantedId`, `category`, `wantedName`, `paragraph`, `jailtime`, `ticketfine`) VALUES
 	(1, 1, '1-25km/h Geschwindigkeitsüberschreitung', 1, 0, 150),
 	(2, 1, '25-50km/h Geschwindigkeitsüberschreitung', 2, 0, 300),
@@ -37731,7 +37731,7 @@ INSERT INTO `server_wanteds` (`wantedId`, `category`, `wantedName`, `paragraph`,
 	(68, 8, 'Amtsanmaßung', 5, 0, 9500),
 	(69, 8, 'Amtsmissbrauch', 6, 0, 10000);
 
--- Exportiere Struktur von Tabelle Sa-Market-A.server_weedpots
+-- Exportiere Struktur von Tabelle ValeaRP-A.server_weedpots
 CREATE TABLE IF NOT EXISTS `server_weedpots` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `remainingMinutes` int(11) NOT NULL,
@@ -37743,7 +37743,7 @@ CREATE TABLE IF NOT EXISTS `server_weedpots` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
 
--- Exportiere Daten aus Tabelle Sa-Market-A.server_weedpots: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle ValeaRP-A.server_weedpots: ~0 rows (ungefähr)
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

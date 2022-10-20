@@ -148,7 +148,7 @@ namespace Altv_Roleplay.Handler
                         return;
                     }
 
-                    //Break up Vehicles Sheytan
+                    //Break up Vehicles ValeaRP
                     ClassicVehicle veh = (ClassicVehicle)Alt.GetAllVehicles().ToList().FirstOrDefault(x => x != null && x.Exists && ((ClassicVehicle)x).VehicleId > 0 && player.Position.IsInRange(x.Position, 5f));
                     if (veh != null && veh.Exists && player.Vehicle != veh)
                     {
