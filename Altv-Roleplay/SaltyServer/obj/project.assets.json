@@ -2,10 +2,10 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "AltV.Net/11.3.0": {
+      "AltV.Net/12.0.1": {
         "type": "package",
         "dependencies": {
-          "AltV.Net.Shared": "11.3.0"
+          "AltV.Net.Shared": "12.0.1"
         },
         "compile": {
           "lib/net6.0/AltV.Net.dll": {}
@@ -14,7 +14,7 @@
           "lib/net6.0/AltV.Net.dll": {}
         }
       },
-      "AltV.Net.CApi/11.3.0": {
+      "AltV.Net.CApi/12.0.1": {
         "type": "package",
         "compile": {
           "lib/net6.0/AltV.Net.CApi.dll": {}
@@ -23,10 +23,10 @@
           "lib/net6.0/AltV.Net.CApi.dll": {}
         }
       },
-      "AltV.Net.Shared/11.3.0": {
+      "AltV.Net.Shared/12.0.1": {
         "type": "package",
         "dependencies": {
-          "AltV.Net.CApi": "11.3.0"
+          "AltV.Net.CApi": "12.0.1"
         },
         "compile": {
           "lib/net6.0/AltV.Net.Shared.dll": {}
@@ -38,42 +38,42 @@
     }
   },
   "libraries": {
-    "AltV.Net/11.3.0": {
-      "sha512": "DeSVzC6v9lKUcB6AelpJHLfZxW70c4G/d9Em8DGpbax8fmlDd3cpNdV54Mue/hutzu7jinYZS/oyXXnLChw2vg==",
+    "AltV.Net/12.0.1": {
+      "sha512": "zXTYoWkMOUaYiwBdqMsATzxMKhFTTDC1II8TPFjbeXhcutjSNyoOl/WVapGesIFrFWDHdtKSQMneIsbd26qHCA==",
       "type": "package",
-      "path": "altv.net/11.3.0",
+      "path": "altv.net/12.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "altv.net.11.3.0.nupkg.sha512",
+        "altv.net.12.0.1.nupkg.sha512",
         "altv.net.nuspec",
         "icon.png",
         "lib/net6.0/AltV.Net.dll",
         "license.txt"
       ]
     },
-    "AltV.Net.CApi/11.3.0": {
-      "sha512": "PlbBOFnXrF9fdKISrScLN0tj9faoBy6scUYTO4lZLdJxKWEbafH1/ee+PJFHNDJMYcCIQ/V1IJWP2zzdhVV0hQ==",
+    "AltV.Net.CApi/12.0.1": {
+      "sha512": "o4bV17AFgz3b9PW2wJMBIWzR0I+ttFlZe/97cVXOiZBRTW6WwjXojkSQ6dOloDKOtbYMGtRiQ108M+hjoKIuvw==",
       "type": "package",
-      "path": "altv.net.capi/11.3.0",
+      "path": "altv.net.capi/12.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "altv.net.capi.11.3.0.nupkg.sha512",
+        "altv.net.capi.12.0.1.nupkg.sha512",
         "altv.net.capi.nuspec",
         "icon.png",
         "lib/net6.0/AltV.Net.CApi.dll",
         "license.txt"
       ]
     },
-    "AltV.Net.Shared/11.3.0": {
-      "sha512": "1FfegmYJYALMkTkjZ/djrtsy1pLZiZi5Miz37zncs0tIqpwjPfQ0daos7ZL+QYNR83dBXkqBdbcwHdwVkvTB0g==",
+    "AltV.Net.Shared/12.0.1": {
+      "sha512": "Zj44ivDuBvM8C0eRCM1m9rAHeyn2ckGLKLBEqMT18w/jpThGIuTk7r5iJF38nkcnkSXT3mtOSJuiXtUmSVYpsA==",
       "type": "package",
-      "path": "altv.net.shared/11.3.0",
+      "path": "altv.net.shared/12.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "altv.net.shared.11.3.0.nupkg.sha512",
+        "altv.net.shared.12.0.1.nupkg.sha512",
         "altv.net.shared.nuspec",
         "icon.png",
         "lib/net6.0/AltV.Net.Shared.dll",
@@ -83,23 +83,23 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "AltV.Net >= 11.3.0"
+      "AltV.Net >= 12.0.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\alexa\\.nuget\\packages\\": {}
+    "C:\\Users\\Dimitri\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexa\\Desktop\\ValeaRP-A\\Altv-Roleplay\\SaltyServer\\SaltyChat.Server.csproj",
+      "projectUniqueName": "C:\\Users\\Dimitri\\Desktop\\ValeaRP\\ValeaRP-Free\\Altv-Roleplay\\SaltyServer\\SaltyChat.Server.csproj",
       "projectName": "SaltyChat.Server",
-      "projectPath": "C:\\Users\\alexa\\Desktop\\ValeaRP-A\\Altv-Roleplay\\SaltyServer\\SaltyChat.Server.csproj",
-      "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexa\\Desktop\\ValeaRP-A\\Altv-Roleplay\\SaltyServer\\obj\\",
+      "projectPath": "C:\\Users\\Dimitri\\Desktop\\ValeaRP\\ValeaRP-Free\\Altv-Roleplay\\SaltyServer\\SaltyChat.Server.csproj",
+      "packagesPath": "C:\\Users\\Dimitri\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dimitri\\Desktop\\ValeaRP\\ValeaRP-Free\\Altv-Roleplay\\SaltyServer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dimitri\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -127,7 +127,7 @@
         "dependencies": {
           "AltV.Net": {
             "target": "Package",
-            "version": "[11.3.0, )"
+            "version": "[12.0.1, )"
           }
         },
         "imports": [
@@ -136,7 +136,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -145,7 +146,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

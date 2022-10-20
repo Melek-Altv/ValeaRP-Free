@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexa\\Desktop\\ValeaRP-A\\Altv-Roleplay\\Altv-Roleplay\\Altv-Roleplay.csproj": {}
+    "C:\\Users\\Dimitri\\Desktop\\ValeaRP\\ValeaRP-Free\\Altv-Roleplay\\Altv-Roleplay\\Altv-Roleplay.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexa\\Desktop\\ValeaRP-A\\Altv-Roleplay\\Altv-Roleplay\\Altv-Roleplay.csproj": {
+    "C:\\Users\\Dimitri\\Desktop\\ValeaRP\\ValeaRP-Free\\Altv-Roleplay\\Altv-Roleplay\\Altv-Roleplay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\ValeaRP-A\\Altv-Roleplay\\Altv-Roleplay\\Altv-Roleplay.csproj",
+        "projectUniqueName": "C:\\Users\\Dimitri\\Desktop\\ValeaRP\\ValeaRP-Free\\Altv-Roleplay\\Altv-Roleplay\\Altv-Roleplay.csproj",
         "projectName": "Altv-Roleplay",
-        "projectPath": "C:\\Users\\alexa\\Desktop\\ValeaRP-A\\Altv-Roleplay\\Altv-Roleplay\\Altv-Roleplay.csproj",
-        "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexa\\Desktop\\ValeaRP-A\\Altv-Roleplay\\Altv-Roleplay\\obj\\",
+        "projectPath": "C:\\Users\\Dimitri\\Desktop\\ValeaRP\\ValeaRP-Free\\Altv-Roleplay\\Altv-Roleplay\\Altv-Roleplay.csproj",
+        "packagesPath": "C:\\Users\\Dimitri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dimitri\\Desktop\\ValeaRP\\ValeaRP-Free\\Altv-Roleplay\\Altv-Roleplay\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dimitri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\alexa\\Desktop\\ValeaRP-A\\Altv-Roleplay\\DiscordLog\\DiscordLog.csproj": {
-                "projectPath": "C:\\Users\\alexa\\Desktop\\ValeaRP-A\\Altv-Roleplay\\DiscordLog\\DiscordLog.csproj"
+              "C:\\Users\\Dimitri\\Desktop\\ValeaRP\\ValeaRP-Free\\Altv-Roleplay\\DiscordLog\\DiscordLog.csproj": {
+                "projectPath": "C:\\Users\\Dimitri\\Desktop\\ValeaRP\\ValeaRP-Free\\Altv-Roleplay\\DiscordLog\\DiscordLog.csproj"
               }
             }
           }
@@ -66,13 +66,13 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.9, )"
+              "version": "[6.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.9, )"
+              "version": "[6.0.10, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -88,7 +88,7 @@
             },
             "SlackAPI": {
               "target": "Package",
-              "version": "[1.1.13, )"
+              "version": "[1.1.14, )"
             }
           },
           "imports": [
@@ -97,7 +97,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -106,15 +107,15 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\alexa\\Desktop\\ValeaRP-A\\Altv-Roleplay\\DiscordLog\\DiscordLog.csproj": {
+    "C:\\Users\\Dimitri\\Desktop\\ValeaRP\\ValeaRP-Free\\Altv-Roleplay\\DiscordLog\\DiscordLog.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\ValeaRP-A\\Altv-Roleplay\\DiscordLog\\DiscordLog.csproj",
+        "projectUniqueName": "C:\\Users\\Dimitri\\Desktop\\ValeaRP\\ValeaRP-Free\\Altv-Roleplay\\DiscordLog\\DiscordLog.csproj",
         "projectName": "DiscordLog",
-        "projectPath": "C:\\Users\\alexa\\Desktop\\ValeaRP-A\\Altv-Roleplay\\DiscordLog\\DiscordLog.csproj",
+        "projectPath": "C:\\Users\\Dimitri\\Desktop\\ValeaRP\\ValeaRP-Free\\Altv-Roleplay\\DiscordLog\\DiscordLog.csproj",
         "frameworks": {
           "net48": {
             "projectReferences": {}

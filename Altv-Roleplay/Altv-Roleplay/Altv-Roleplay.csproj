@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-	  <OutputPath>../../../ValeaRP-A\Server\resources\roleplay\server</OutputPath>
+	  <OutputPath>../../../ValeaRP\Server\resources\roleplay\server</OutputPath>
 	  <WarningLevel>5</WarningLevel>
   </PropertyGroup>
 
@@ -19,15 +19,15 @@
     <PackageReference Include="AltV.Net.EntitySync.ServerEvent" Version="12.0.1" />
     <PackageReference Include="AltV.Net.Resources.Chat.Api" Version="12.0.1" />
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.9">
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql.Design" Version="1.1.2" />
-    <PackageReference Include="SlackAPI" Version="1.1.13" />
+    <PackageReference Include="SlackAPI" Version="1.1.14" />
   </ItemGroup>
 
   <ItemGroup>

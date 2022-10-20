@@ -170,3 +170,12 @@ C:\Users\alexa\Desktop\ValeaRP-A\Altv-Roleplay\DiscordLog\obj\Debug\DiscordLog.c
 C:\Users\alexa\Desktop\ValeaRP-A\Altv-Roleplay\DiscordLog\obj\Debug\DiscordLog.csproj.CopyComplete
 C:\Users\alexa\Desktop\ValeaRP-A\Altv-Roleplay\DiscordLog\obj\Debug\DiscordLog.dll
 C:\Users\alexa\Desktop\ValeaRP-A\Altv-Roleplay\DiscordLog\obj\Debug\DiscordLog.pdb
+C:\Users\Dimitri\Desktop\ValeaRP\ValeaRP-Free\Altv-Roleplay\DiscordLog\bin\Debug\DiscordLog.dll
+C:\Users\Dimitri\Desktop\ValeaRP\ValeaRP-Free\Altv-Roleplay\DiscordLog\bin\Debug\DiscordLog.pdb
+C:\Users\Dimitri\Desktop\ValeaRP\ValeaRP-Free\Altv-Roleplay\DiscordLog\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Dimitri\Desktop\ValeaRP\ValeaRP-Free\Altv-Roleplay\DiscordLog\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Dimitri\Desktop\ValeaRP\ValeaRP-Free\Altv-Roleplay\DiscordLog\obj\Debug\DiscordLog.csproj.AssemblyReference.cache
+C:\Users\Dimitri\Desktop\ValeaRP\ValeaRP-Free\Altv-Roleplay\DiscordLog\obj\Debug\DiscordLog.csproj.CoreCompileInputs.cache
+C:\Users\Dimitri\Desktop\ValeaRP\ValeaRP-Free\Altv-Roleplay\DiscordLog\obj\Debug\DiscordLog.csproj.CopyComplete
+C:\Users\Dimitri\Desktop\ValeaRP\ValeaRP-Free\Altv-Roleplay\DiscordLog\obj\Debug\DiscordLog.dll
+C:\Users\Dimitri\Desktop\ValeaRP\ValeaRP-Free\Altv-Roleplay\DiscordLog\obj\Debug\DiscordLog.pdb
